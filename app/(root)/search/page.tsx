@@ -18,7 +18,7 @@ function Page() {
   })
 
   useEffect(() => {
-    console.log(debounced)
+    console.log('Debounced: ', debounced)
     setDropdown(debounced.length >= 3 && assets?.length! > 0)
   }, [debounced, assets])
 
