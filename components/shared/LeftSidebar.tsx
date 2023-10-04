@@ -12,7 +12,7 @@ function LeftSidebar() {
   const pathname = usePathname()
 
   return(
-    <section className="custom-scrollbar leftsidebar">
+    <section className="custom-scrollbar leftsidebar min-w-min">
       <div className="flex w-full flex-1 flex-col gap-6 px-6">
         {sidebarLinks.map((link) => {
 
