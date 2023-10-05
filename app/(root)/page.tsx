@@ -46,7 +46,7 @@ export default async function Home() {
   const tasks = await getTasks()
 
   return (
-    <div className="overflow-hidden rounded-[0.5rem] border bg-background shadow">
+    <div className="portfolio-container overflow-hidden rounded-[0.5rem] border bg-background shadow">
       <h1 className="head-text text-left">Home</h1>
       {/* <div className="container mx-auto py-10"> */}
       {/*   <DataTable columns={columns} data={data} /> */}
