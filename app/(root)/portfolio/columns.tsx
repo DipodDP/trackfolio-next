@@ -14,11 +14,13 @@ import { Button } from "@/components/ui/button"
 // } from "@/components/ui/dropdown-menu"
 import { Checkbox } from "@/components/ui/checkbox"
 
-import { labels, priorities, statuses } from "./data/data"
-import { Task } from "./data/schema"
+import { labels, portfolioLabels, profits, priorities, statuses } from "./data/data"
+import { Share, Task } from "./data/schema"
 import { DataTableRowActions } from "@/components/data-table/data-table-row-actions"
 import { DataTableColumnHeader } from "@/components/data-table/data-table-column-header"
 import { Badge } from "@/components/ui/badge"
+import { PortfolioTableRowActions } from "@/components/data-table/portfolio-table-row-actions"
+import { Quotation, MoneyValue } from "@/lib/models/api.model"
 // import { Badge } from "@/registry/new-york/ui/badge"
 
 // This type is used to define the shape of our data.
@@ -29,6 +31,11 @@ import { Badge } from "@/components/ui/badge"
 //   status: "pending" | "processing" | "success" | "failed"
 //   email: string
 // }
+
+function QuotationToDecimal(quotation: MoneyValue | Quotation) {
+  const fractional = quotation.nano / 1e8
+  return quotation.units + fractional
+}
 
 // export const columns: ColumnDef<Payment>[] = [
 export const columns: ColumnDef<Task>[] = [
@@ -193,6 +200,160 @@ export const columns: ColumnDef<Task>[] = [
     //     </DropdownMenu>
     //   )
     // },
+  },
+
+]
+
+export const columnsPortfolio: ColumnDef<Share>[] = [
+  // This adds a checkbox to each row and a checkbox in the header to select all rows.
+  {
+    id: "select",
+    header: ({ table }) => (
+      <Checkbox
+        checked={table.getIsAllPageRowsSelected()}
+        onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
+        aria-label="Select all"
+        className="translate-y-[2px]"
+      />
+    ),
+    cell: ({ row }) => (
+      <Checkbox
+        checked={row.getIsSelected()}
+        onCheckedChange={(value) => row.toggleSelected(!!value)}
+        aria-label="Select row"
+        className="translate-y-[2px]"
+      />
+    ),
+    enableSorting: false,
+    enableHiding: false,
+  },
+  {
+    accessorKey: "ticker",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Ticker" />
+    ),
+    cell: ({ row }) => <div className="w-[80px]">{row.getValue("ticker")}</div>,
+    enableSorting: false,
+    enableHiding: false,
+  },
+  {
+    accessorKey: "title",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Title" />
+    ),
+    cell: ({ row }) => {
+      const label = portfolioLabels.find((label) => label.value === row.original.type)
+
+      return (
+        <div className="flex space-x-2">
+          {label && <Badge variant="outline">{label.label}</Badge>}
+          <span className="max-w-[500px] truncate font-medium">
+            {row.getValue("title")}
+          </span>
+        </div>
+      )
+    },
+    // filterFn: (row, id, value) => {
+    //   return value.includes(row.getValue(id))
+    // },
+  },
+  {
+    accessorKey: "price",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Price" />
+    ),
+    cell: ({ row }) => {
+      // const amount = parseFloat(row.getValue("price"))
+      const amount = row.getValue<MoneyValue>("price")
+      // Format the amount as a dollar amount
+      const formatted = new Intl.NumberFormat("ru-RU", {
+        style: "currency",
+        currency: amount.currency,
+      }).format(QuotationToDecimal(amount))
+ 
+      return <div className="text-right font-medium w-[80px]">{formatted}</div>
+    },
+    enableSorting: false,
+  },
+  {
+    accessorKey: "quantity",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Quantity" />
+    ),
+    cell: ({ row }) => <div className="w-[80px]">{row.getValue("quantity")}</div>,
+    enableSorting: false,
+  },
+  {
+    accessorKey: "total",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Total" />
+    ),
+    cell: ({ row }) => {
+      // const amount = parseFloat(row.getValue("price"))
+      const amount = row.getValue<MoneyValue>("total")
+      // Format the amount as a dollar amount
+      const formatted = new Intl.NumberFormat("ru-RU", {
+        style: "currency",
+        currency: amount.currency,
+      }).format(QuotationToDecimal(amount))
+ 
+      return <div className="text-right font-medium w-[80px]">{formatted}</div>
+    },
+    enableSorting: false,
+  },
+  {
+    accessorKey: "proportion",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Proportion" />
+    ),
+    cell: ({ row }) => {
+      const amount = parseFloat(row.getValue("proportion"))/100
+      const formatted = new Intl.NumberFormat("ru-RU", {
+        style: "percent",
+        maximumFractionDigits: 2
+      }).format(amount)
+ 
+      return <div className="text-right font-medium w-[80px]">{formatted}</div>
+    },
+  },
+  {
+    accessorKey: "profit",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Profit" />
+    ),
+    cell: ({ row }) => {
+      const profit = profits.find(
+        // (profits) => profits.value === row.getValue("profit")
+        (profits) => {
+          if (row.getValue<number>("profit")/100 >= 0) {
+            return profits.value === "high"
+          }
+          else {
+            return profits.value === "low"
+          }
+        }
+      )
+
+      if (!profit) {
+        return null
+      }
+
+      return (
+        <div className="flex items-center">
+          {profit.icon && (
+            <profit.icon className="mr-2 h-4 w-4 text-muted-foreground" />
+          )}
+          <span className="max-w-[500px] truncate font-medium">
+            {row.getValue("profit")}
+          </span>
+        </div>
+      )
+    }
+  },
+  // Let's add row actions to our table. We'll use a <Dropdown /> component for this.
+  {
+    id: "actions",
+    cell: ({ row }) => <PortfolioTableRowActions row={row} />
   },
 
 ]

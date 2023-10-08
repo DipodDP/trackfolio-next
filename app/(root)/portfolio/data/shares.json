@@ -1,0 +1,38 @@
+  [
+    {
+      "ticker": "BBG",
+      "title": "BBG004731032",
+      "type": "share",
+      "quantity": 11.0,
+      "price":  {
+        "currency": "rub",
+        "units": 6721,
+        "nano": 50000000
+      },
+      "profit": -34876.1,
+      "proportion": 38.8,
+      "total": {
+        "currency": "rub",
+        "units": 67346,
+        "nano": 50000000
+      }
+    },
+    {
+      "ticker": "KKYY",
+      "title": "BBG00475KKY8",
+      "type": "share",
+      "quantity": 60.0,
+      "price":  {
+        "currency": "rub",
+        "units": 3551,
+        "nano": 35000000
+      },
+      "profit": 40260.1,
+      "proportion": 61.2,
+      "total": {
+        "currency": "rub",
+        "units": 136134,
+        "nano": 0
+      }
+    }
+  ]

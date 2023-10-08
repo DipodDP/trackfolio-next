@@ -11,3 +11,30 @@ export const taskSchema = z.object({
 })
 
 export type Task = z.infer<typeof taskSchema>
+
+// export interface Quotation {
+//     units: number
+//     nano: number
+//
+// }
+
+export const MoneyValue = z.object(
+{
+    currency: z.string(),
+    units: z.number(),
+    nano: z.number()
+
+})
+
+export const shareSchema = z.object({
+  ticker: z.string(),
+  title: z.string(),
+  type: z.string(),
+  price: MoneyValue,
+  quantity: z.number(),
+  total: MoneyValue,
+  proportion: z.number(),
+  profit: z.number(),
+})
+
+export type Share = z.infer<typeof shareSchema>

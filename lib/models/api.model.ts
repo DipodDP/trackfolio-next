@@ -26,3 +26,44 @@ export interface IInstrumentShort {
   weekend_flag: boolean
   blocked_tca_flag: boolean
 }
+
+export interface Quotation {
+    units: number
+    nano: number
+
+}
+
+export interface MoneyValue {
+    currency: string
+    units: number
+    nano: number
+
+}
+
+export interface IPortfolioPosition {
+  figi: string
+  instrument_type: string
+  quantity: Quotation
+  average_position_price: MoneyValue
+  expected_yield: Quotation
+  current_nkd: MoneyValue
+  average_position_price_pt: Quotation
+  current_price: MoneyValue
+  average_position_price_fifo: MoneyValue
+  quantity_lots: Quotation
+  blocked: boolean
+  blocked_lots: Quotation
+  position_uid: string
+  instrument_uid: string
+  var_margin: MoneyValue
+  expected_yield_fifo: Quotation
+}
+
+export interface ApiPortfolioResponse {
+    expected_yield: Quotation
+    positions: IPortfolioPosition[]
+    account_id: string
+    total_amount_portfolio: MoneyValue
+}
+
+
