@@ -242,7 +242,7 @@ export const columnsPortfolio: ColumnDef<Share>[] = [
       <DataTableColumnHeader column={column} title="Title" />
     ),
     cell: ({ row }) => {
-      const label = portfolioLabels.find((label) => label.value === row.original.type)
+      const label = portfolioLabels.find((label) => label.value === row.original.instrument_type)
 
       return (
         <div className="flex space-x-2">
@@ -258,13 +258,13 @@ export const columnsPortfolio: ColumnDef<Share>[] = [
     // },
   },
   {
-    accessorKey: "price",
+    accessorKey: "current_price",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Price" />
     ),
     cell: ({ row }) => {
       // const amount = parseFloat(row.getValue("price"))
-      const amount = row.getValue<MoneyValue>("price")
+      const amount = row.getValue<MoneyValue>("current_price")
       // Format the amount as a dollar amount
       const formatted = new Intl.NumberFormat("ru-RU", {
         style: "currency",
@@ -339,7 +339,7 @@ export const columnsPortfolio: ColumnDef<Share>[] = [
       }
 
       return (
-        <div className="flex items-center">
+        <div className="flex items-center text-green-600">
           {profit.icon && (
             <profit.icon className="mr-2 h-4 w-4 text-muted-foreground" />
           )}

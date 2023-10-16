@@ -29,8 +29,8 @@ export const MoneyValue = z.object(
 export const shareSchema = z.object({
   ticker: z.string(),
   title: z.string(),
-  type: z.string(),
-  price: MoneyValue,
+  instrument_type: z.string(),
+  current_price: MoneyValue,
   quantity: z.number(),
   total: MoneyValue,
   proportion: z.number(),
