@@ -20,7 +20,8 @@ import { DataTableRowActions } from "@/components/data-table/data-table-row-acti
 import { DataTableColumnHeader } from "@/components/data-table/data-table-column-header"
 import { Badge } from "@/components/ui/badge"
 import { PortfolioTableRowActions } from "@/components/data-table/portfolio-table-row-actions"
-import { Quotation, MoneyValue } from "@/lib/models/api.model"
+import { MoneyValue } from "@/lib/models/api.model"
+import { QuotationToDecimal } from "@/lib/utils"
 // import { Badge } from "@/registry/new-york/ui/badge"
 
 // This type is used to define the shape of our data.
@@ -31,11 +32,6 @@ import { Quotation, MoneyValue } from "@/lib/models/api.model"
 //   status: "pending" | "processing" | "success" | "failed"
 //   email: string
 // }
-
-function QuotationToDecimal(quotation: MoneyValue | Quotation) {
-  const fractional = quotation.nano / 1e8
-  return quotation.units + fractional
-}
 
 // export const columns: ColumnDef<Payment>[] = [
 export const columns: ColumnDef<Task>[] = [
@@ -237,9 +233,9 @@ export const columnsPortfolio: ColumnDef<Share>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: "title",
+    accessorKey: "name",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Title" />
+      <DataTableColumnHeader column={column} title="Name" />
     ),
     cell: ({ row }) => {
       const label = portfolioLabels.find((label) => label.value === row.original.instrument_type)
@@ -248,7 +244,7 @@ export const columnsPortfolio: ColumnDef<Share>[] = [
         <div className="flex space-x-2">
           {label && <Badge variant="outline">{label.label}</Badge>}
           <span className="max-w-[500px] truncate font-medium">
-            {row.getValue("title")}
+            {row.getValue("name")}
           </span>
         </div>
       )
@@ -280,7 +276,7 @@ export const columnsPortfolio: ColumnDef<Share>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Quantity" />
     ),
-    cell: ({ row }) => <div className="w-[80px]">{row.getValue("quantity")}</div>,
+    cell: ({ row }) => <div className="w-[80px]">{QuotationToDecimal(row.getValue("quantity"))}</div>,
     enableSorting: false,
   },
   {
@@ -307,7 +303,7 @@ export const columnsPortfolio: ColumnDef<Share>[] = [
       <DataTableColumnHeader column={column} title="Proportion" />
     ),
     cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("proportion"))/100
+      const amount = parseFloat(row.getValue("proportion"))
       const formatted = new Intl.NumberFormat("ru-RU", {
         style: "percent",
         maximumFractionDigits: 2
@@ -338,13 +334,19 @@ export const columnsPortfolio: ColumnDef<Share>[] = [
         return null
       }
 
+      const amount = parseFloat(row.getValue("proportion"))
+      const formatted = new Intl.NumberFormat("ru-RU", {
+        style: "percent",
+        maximumFractionDigits: 2
+      }).format(amount)
+
       return (
         <div className="flex items-center text-green-600">
           {profit.icon && (
             <profit.icon className="mr-2 h-4 w-4 text-muted-foreground" />
           )}
           <span className="max-w-[500px] truncate font-medium">
-            {row.getValue("profit")}
+            {formatted}
           </span>
         </div>
       )

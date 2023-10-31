@@ -49,7 +49,7 @@ export function PortfolioTableRowActions<TData>({
         <DropdownMenuSub>
           <DropdownMenuSubTrigger>portfoliotypes</DropdownMenuSubTrigger>
           <DropdownMenuSubContent>
-            <DropdownMenuRadioGroup value={share.type}>
+            <DropdownMenuRadioGroup value={share.instrument_type}>
               {portfolioLabels.map((type) => (
                 <DropdownMenuRadioItem key={type.value} value={type.value}>
                   {type.label}

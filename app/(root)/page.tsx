@@ -1,7 +1,7 @@
 import { promises as fs } from "fs"
 import path from "path"
 import { Metadata } from "next"
-import Image from "next/image"
+// import Image from "next/image"
 import { z } from "zod"
 // import { Payment, columns } from "./portfolio/columns"
 import { columns, columnsPortfolio } from "./portfolio/columns"
@@ -21,13 +21,14 @@ export const metadata: Metadata = {
 
 // Simulate a API response for positions in portfolio.
 async function getPositions() {
-  const data = await fs.readFile(
-    path.join(process.cwd(), "/app/(root)/portfolio/data/shares.json")
-  )
 
-  const positions = JSON.parse(data.toString())
+  const dataPositions = await fs.readFile(
+    path.join(process.cwd(), "/app/(root)/portfolio/data/positions.json")
+  )
+  const positions = JSON.parse(dataPositions.toString())
 
   console.log('Positions: ', positions)
+
   return z.array(shareSchema).parse(positions)
 }
 
