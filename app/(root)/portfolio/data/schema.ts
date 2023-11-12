@@ -34,7 +34,40 @@ export const shareSchema = z.object({
   quantity: Quotation,
   total: MoneyValue,
   proportion: z.string().nullable(),
+  proportion_in_portfolio: z.string().nullable(),
   profit: z.string().nullable(),
 })
 
+export const structureSchema = z.object({
+  total_amount: MoneyValue,
+  high_risk_part: z.object({
+    etf_proportion: z.string().nullable(),
+    shares_proportion: z.string().nullable(),
+    etf_amount: MoneyValue,
+    shares_amount: MoneyValue,
+    high_risk_total_amount: MoneyValue,
+    high_risk_total_proportion: z.string().nullable()
+  }),
+  low_risk_part: z.object({
+    gov_bonds_proportion:  z.string().nullable(),
+    corp_bonds_proportion:  z.string().nullable(),
+    gov_bonds_amount: MoneyValue,
+    corp_bonds_amount: MoneyValue,
+    low_risk_total_amount: MoneyValue,
+    low_risk_total_proportion:  z.string().nullable()
+  })
+})
+
+export const proportionSchema = z.object({
+  type: z.string(),
+  sum: MoneyValue,
+  proportion: z.string().nullable(),
+  plan_sum: MoneyValue,
+  plan_proportion: z.string().nullable(),
+  format: z.boolean(),
+  disbalance: z.number().nullable(),
+})
+
 export type Share = z.infer<typeof shareSchema>
+// export type Structure = z.infer<typeof structureSchema>
+export type Proportion = z.infer<typeof proportionSchema>

@@ -2,7 +2,7 @@
 
 import { ColumnDef } from "@tanstack/react-table"
 import { ArrowUpDown, MoreHorizontal } from "lucide-react"
- 
+
 import { Button } from "@/components/ui/button"
 // import {
 //   DropdownMenu,
@@ -266,7 +266,7 @@ export const columnsPortfolio: ColumnDef<Share>[] = [
         style: "currency",
         currency: amount.currency,
       }).format(QuotationToDecimal(amount))
- 
+
       return <div className="text-right font-medium w-[80px]">{formatted}</div>
     },
     enableSorting: false,
@@ -292,23 +292,23 @@ export const columnsPortfolio: ColumnDef<Share>[] = [
         style: "currency",
         currency: amount.currency,
       }).format(QuotationToDecimal(amount))
- 
+
       return <div className="text-right font-medium w-[80px]">{formatted}</div>
     },
     enableSorting: false,
   },
   {
-    accessorKey: "proportion",
+    accessorKey: "proportion_in_portfolio",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Proportion" />
     ),
     cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("proportion"))
+      const amount = parseFloat(row.getValue("proportion_in_portfolio"))
       const formatted = new Intl.NumberFormat("ru-RU", {
         style: "percent",
         maximumFractionDigits: 2
       }).format(amount)
- 
+
       return <div className="text-right font-medium w-[80px]">{formatted}</div>
     },
   },
@@ -321,7 +321,7 @@ export const columnsPortfolio: ColumnDef<Share>[] = [
       const profit = profits.find(
         // (profits) => profits.value === row.getValue("profit")
         (profits) => {
-          if (row.getValue<number>("profit")/100 >= 0) {
+          if (row.getValue<number>("profit") >= 0) {
             return profits.value === "high"
           }
           else {
@@ -334,7 +334,7 @@ export const columnsPortfolio: ColumnDef<Share>[] = [
         return null
       }
 
-      const amount = parseFloat(row.getValue("proportion"))
+      const amount = parseFloat(row.getValue("profit"))
       const formatted = new Intl.NumberFormat("ru-RU", {
         style: "percent",
         maximumFractionDigits: 2
