@@ -19,7 +19,7 @@ export const columnsStructure: ColumnDef<Proportion>[] = [
   {
     accessorKey: "type",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Instrument type" />
+      <DataTableColumnHeader column={column} title="Instrument type" className="text-center w-[120px]"/>
     ),
     cell: ({ row }) => <div className={`w-[120px] ${row.getValue("format") ? 'font-bold' : 'font-medium'}`} >
       {row.getValue("type")}
@@ -30,7 +30,7 @@ export const columnsStructure: ColumnDef<Proportion>[] = [
   {
     accessorKey: "sum",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Sum" className="text-center" />
+      <DataTableColumnHeader column={column} title="Sum" className="text-right w-[80px]" />
     ),
     cell: ({ row }) => {
       // const amount = parseFloat(row.getValue("price"))
@@ -73,7 +73,7 @@ export const columnsStructure: ColumnDef<Proportion>[] = [
   {
     accessorKey: "plan_sum",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Plan sum" className="text-center" />
+      <DataTableColumnHeader column={column} title="Plan sum" className="text-right w-[80px]" />
     ),
     cell: ({ row }) => {
       // const amount = parseFloat(row.getValue("price"))

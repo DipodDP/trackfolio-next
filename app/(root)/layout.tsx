@@ -5,7 +5,7 @@ import Topbar from "@/components/shared/Topbar";
 import LeftSidebar from "@/components/shared/LeftSidebar";
 import RightSidebar from "@/components/shared/RightSidebar";
 import Bottombar from "@/components/shared/Bottombar";
-import { StoreProvider } from "@/store/StoreProvider";
+import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,12 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <StoreProvider>
+    <html lang="en">
+      <body className={inter.className}>
 
-      <html lang="en">
-        <body className={inter.className}>
+        <Providers>
 
           <Topbar />
+
           <main className="flex flex-row bg-dark-1">
 
             <LeftSidebar />
@@ -42,8 +43,9 @@ export default function RootLayout({
 
           <Bottombar />
 
-        </body>
-      </html>
-    </StoreProvider>
+        </Providers>
+
+      </body>
+    </html>
   )
 }

@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 import { portfolioLabels } from "@/app/(root)/portfolio/data/data"
-import { shareSchema } from "@/app/(root)/portfolio/data/schema"
+import { positionSchema } from "@/app/(root)/portfolio/data/schema"
 
 interface PortfolioTableRowActionsProps<TData> {
   row: Row<TData>
@@ -28,7 +28,7 @@ interface PortfolioTableRowActionsProps<TData> {
 export function PortfolioTableRowActions<TData>({
   row,
 }: PortfolioTableRowActionsProps<TData>) {
-  const share = shareSchema.parse(row.original)
+  const position = positionSchema.parse(row.original)
 
   return (
     <DropdownMenu>
@@ -49,7 +49,7 @@ export function PortfolioTableRowActions<TData>({
         <DropdownMenuSub>
           <DropdownMenuSubTrigger>portfoliotypes</DropdownMenuSubTrigger>
           <DropdownMenuSubContent>
-            <DropdownMenuRadioGroup value={share.instrument_type}>
+            <DropdownMenuRadioGroup value={position.instrument_type}>
               {portfolioLabels.map((type) => (
                 <DropdownMenuRadioItem key={type.value} value={type.value}>
                   {type.label}

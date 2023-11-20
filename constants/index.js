@@ -16,8 +16,8 @@ export const sidebarLinks = [
   // },
   {
     imgURL: "/assets/create.svg",
-    route: "/counter",
-    label: "Counter Redux Example",
+    route: "/examples",
+    label: "Development Examples",
   },
   // {
   //   imgURL: "/assets/community.svg",
