@@ -27,19 +27,6 @@ export interface IInstrumentShort {
   blocked_tca_flag: boolean
 }
 
-export interface Quotation {
-  units: number
-  nano: number
-
-}
-
-export interface MoneyValue {
-  currency: string
-  units: number
-  nano: number
-
-}
-
 export interface IPortfolioPosition {
   figi: string
   instrument_type: string
@@ -110,9 +97,32 @@ export interface IPortfolioResponse {
 }
 
 export interface IStructureResponse {
-  total_amount: MoneyValue;
-  high_risk_part: HighRiskPart;
-  low_risk_part: LowRiskPart;
+  total_amount: MoneyValue
+  risk_profile: string;
+  max_risk_part_drawdown: string;
+  risk_proportion: string;
+  corp_bonds_proportion: string;
+  shares_proportion: string;
+  current_structure: PortfolioRiskParts;
+  plan_structure: PortfolioRiskParts;
+}
+
+export interface Quotation {
+  units: number
+  nano: number
+
+}
+
+export interface MoneyValue {
+  currency: string
+  units: number
+  nano: number
+
+}
+
+export interface PortfolioRiskParts {
+    high_risk_part: HighRiskPart;
+    low_risk_part:  LowRiskPart;
 }
 
 export interface HighRiskPart {

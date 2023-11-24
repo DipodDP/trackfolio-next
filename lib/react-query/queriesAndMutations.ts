@@ -41,66 +41,65 @@ export const useGetStructure = () => {
     queryKey: [QUERY_KEYS.STRUCTURE],
     queryFn: () => portfolioService.getStructure(),
     select: ({ data: structure }) => {
-      let proportions = [
+      let portfolioParts = [
         {
           type: "Low risk part",
-          sum: structure.low_risk_part.low_risk_total_amount,
-          plan_sum: structure.low_risk_part.low_risk_total_amount,
-          proportion: structure.low_risk_part.low_risk_total_proportion,
-          plan_proportion: structure.low_risk_part.low_risk_total_proportion,
+          sum: structure.current_structure.low_risk_part.low_risk_total_amount,
+          plan_sum: structure.plan_structure.low_risk_part.low_risk_total_amount,
+          proportion: structure.current_structure.low_risk_part.low_risk_total_proportion,
+          plan_proportion: structure.plan_structure.low_risk_part.low_risk_total_proportion,
           format: true
         },
         {
           type: "Gov bonds",
-          sum: structure.low_risk_part.gov_bonds_amount,
-          plan_sum: structure.low_risk_part.gov_bonds_amount,
-          proportion: structure.low_risk_part.gov_bonds_proportion,
-          plan_proportion: structure.low_risk_part.gov_bonds_proportion,
+          sum: structure.current_structure.low_risk_part.gov_bonds_amount,
+          plan_sum: structure.plan_structure.low_risk_part.gov_bonds_amount,
+          proportion: structure.current_structure.low_risk_part.gov_bonds_proportion,
+          plan_proportion: structure.plan_structure.low_risk_part.gov_bonds_proportion,
           format: false
         },
         {
           type: "Corp bonds",
-          sum: structure.low_risk_part.corp_bonds_amount,
-          plan_sum: structure.low_risk_part.corp_bonds_amount,
-          proportion: structure.low_risk_part.corp_bonds_proportion,
-          plan_proportion: structure.low_risk_part.corp_bonds_proportion,
+          sum: structure.current_structure.low_risk_part.corp_bonds_amount,
+          plan_sum: structure.plan_structure.low_risk_part.corp_bonds_amount,
+          proportion: structure.current_structure.low_risk_part.corp_bonds_proportion,
+          plan_proportion: structure.plan_structure.low_risk_part.corp_bonds_proportion,
           format: false
         },
         {
           type: "High risk part",
-          sum: structure.high_risk_part.high_risk_total_amount,
-          plan_sum: structure.high_risk_part.high_risk_total_amount,
-          proportion: structure.high_risk_part.high_risk_total_proportion,
-          plan_proportion: structure.high_risk_part.high_risk_total_proportion,
+          sum: structure.current_structure.high_risk_part.high_risk_total_amount,
+          plan_sum: structure.plan_structure.high_risk_part.high_risk_total_amount,
+          proportion: structure.current_structure.high_risk_part.high_risk_total_proportion,
+          plan_proportion: structure.plan_structure.high_risk_part.high_risk_total_proportion,
           format: true
         },
         {
           type: "ETF",
-          sum: structure.high_risk_part.etf_amount,
-          plan_sum: structure.high_risk_part.etf_amount,
-          proportion: structure.high_risk_part.etf_proportion,
-          plan_proportion: structure.high_risk_part.etf_proportion,
+          sum: structure.current_structure.high_risk_part.etf_amount,
+          plan_sum: structure.plan_structure.high_risk_part.etf_amount,
+          proportion: structure.current_structure.high_risk_part.etf_proportion,
+          plan_proportion: structure.plan_structure.high_risk_part.etf_proportion,
           format: false
         },
         {
           type: "Shares",
-          sum: structure.high_risk_part.shares_amount,
-          plan_sum: structure.high_risk_part.shares_amount,
-          proportion: structure.high_risk_part.shares_proportion,
-          plan_proportion: structure.high_risk_part.shares_proportion,
+          sum: structure.current_structure.high_risk_part.shares_amount,
+          plan_sum: structure.plan_structure.high_risk_part.shares_amount,
+          proportion: structure.current_structure.high_risk_part.shares_proportion,
+          plan_proportion: structure.plan_structure.high_risk_part.shares_proportion,
           format: false
         },
       ]
-      proportions = proportions.map(item => {
+      portfolioParts = portfolioParts.map(item => {
         return {
           ...item,
           disbalance: item.proportion !== null ? item.plan_proportion - item.proportion : null
-        };
-      });
+        }
+      })
 
-      return proportions
+      return portfolioParts
     }
-
   })
 }
 

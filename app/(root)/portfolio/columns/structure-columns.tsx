@@ -4,7 +4,7 @@ import { ColumnDef } from "@tanstack/react-table"
 
 import { Proportion } from "../data/schema"
 import { DataTableColumnHeader } from "@/components/data-table/data-table-column-header"
-import { MoneyValue } from "@/lib/models/api.model"
+import { MoneyValue } from "@/lib/models/portfolio.api.model"
 import { QuotationToDecimal } from "@/lib/utils"
 
 

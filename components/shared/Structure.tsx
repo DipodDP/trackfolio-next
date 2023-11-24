@@ -3,7 +3,7 @@ import { z } from "zod"
 import { StructureTable } from "@/app/(root)/portfolio/structure-table"
 import { columnsStructure } from "@/app/(root)/portfolio/columns/structure-columns"
 
-import { proportionSchema, shareSchema } from "@/app/(root)/portfolio/data/schema"
+import { proportionSchema } from "@/app/(root)/portfolio/data/schema"
 import { useGetPortfolio, useGetStructure } from "@/lib/react-query/queriesAndMutations"
 
 

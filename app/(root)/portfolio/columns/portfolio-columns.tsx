@@ -150,7 +150,7 @@ export const columnsPortfolio: ColumnDef<Position>[] = [
       }).format(amount)
 
       return (
-        <div className="flex items-center text-green-600">
+        <div className={`flex items-center ${amount < 0 ? "text-red-700" : "text-green-600"}`}>
           {profit.icon && (
             <profit.icon className="mr-2 h-4 w-4 text-muted-foreground" />
           )}

@@ -13,6 +13,7 @@ class PortfolioService {
   }
 
   async getStructure() {
+
     return axios.get<IStructureResponse>(
       `${this.URL}/${API_ENDPOINTS.STRUCTURE}`
     )

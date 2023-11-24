@@ -1,7 +1,7 @@
 'use client'
 import { z } from "zod"
 import { columnsPortfolio } from "@/app/(root)/portfolio/columns/portfolio-columns"
-import { DataTable } from "@/app/(root)/portfolio/data-table"
+import { DataTable } from "@/app/(root)/portfolio/portfolio-table"
 
 import { UserNav } from "@/components/data-table/user-nav"
 import { positionSchema } from "@/app/(root)/portfolio/data/schema"
