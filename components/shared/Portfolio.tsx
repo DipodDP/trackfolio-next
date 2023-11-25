@@ -4,21 +4,28 @@ import { columnsPortfolio } from "@/app/(root)/portfolio/columns/portfolio-colum
 import { DataTable } from "@/app/(root)/portfolio/portfolio-table"
 
 import { UserNav } from "@/components/data-table/user-nav"
-import { positionSchema } from "@/app/(root)/portfolio/data/schema"
+import { portfolioSchema } from "@/app/(root)/portfolio/data/schema"
 import { useGetPortfolio } from "@/lib/react-query/queriesAndMutations"
 
 
 export function Portfolio() {
   const { error, isLoading, data: dataPositions } = useGetPortfolio()
-  let portfolioPositions;
   let positions;
   if (dataPositions?.data) {
-    console.log('Portfolio: ', dataPositions.data.positions)
-    portfolioPositions = dataPositions.data.positions
-    // drop currency positions from fetched data
-    positions = z.array(positionSchema)
-      .parse(portfolioPositions)
+    const portfolioPositions = dataPositions.data.positions
       .filter(item => item.instrument_type !== 'currency')
+    const portfolioPlanPositions = dataPositions.data.plan_positions
+      .filter(item => item.instrument_type !== 'currency')
+
+    const combinedPositions = portfolioPositions.reduce((acc, position) => {
+      const positionData = portfolioPlanPositions.find(planPositions => planPositions.ticker === position.ticker)
+      const allPositionData = {...position, ...positionData}
+      acc.push(allPositionData)
+
+      return acc
+    }, [] as Array<Object>)
+    positions = z.array(portfolioSchema).parse(combinedPositions)
+    console.log('Positions: ', positions)
   }
 
   return (
@@ -40,7 +47,6 @@ export function Portfolio() {
                 <UserNav />
               </div>
             </div>
-            {/* <DataTable data={positions} columns={columns} /> */}
             <DataTable data={positions} columns={columnsPortfolio} />
           </div>
 

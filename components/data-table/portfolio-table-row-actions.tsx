@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 import { portfolioLabels } from "@/app/(root)/portfolio/data/data"
-import { positionSchema } from "@/app/(root)/portfolio/data/schema"
+import { portfolioSchema } from "@/app/(root)/portfolio/data/schema"
 
 interface PortfolioTableRowActionsProps<TData> {
   row: Row<TData>
@@ -28,7 +28,7 @@ interface PortfolioTableRowActionsProps<TData> {
 export function PortfolioTableRowActions<TData>({
   row,
 }: PortfolioTableRowActionsProps<TData>) {
-  const position = positionSchema.parse(row.original)
+  const position = portfolioSchema.parse(row.original)
 
   return (
     <DropdownMenu>

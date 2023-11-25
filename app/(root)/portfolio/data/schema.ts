@@ -14,7 +14,34 @@ export const MoneyValue = z.object(
 
 })
 
-export const positionSchema = z.object({
+// export const positionSchema = z.object({
+//   ticker: z.string(),
+//   name: z.string(),
+//   instrument_type: z.string(),
+//   current_price: MoneyValue,
+//   quantity: Quotation,
+//   total: MoneyValue,
+//   proportion: z.string().nullable(),
+//   proportion_in_portfolio: z.string().nullable(),
+//   profit: z.string().nullable(),
+// })
+//
+// export const planPositionSchema = z.object({
+//   ticker: z.string(),
+//   name: z.string(),
+//   instrument_type: z.string(),
+//   plan_quantity: Quotation,
+//   plan_total: MoneyValue,
+//   plan_proportion_in_portfolio: z.string().nullable(),
+//   to_buy_lots: Quotation,
+//   target_profit: z.string(),
+//   exit_drawdown: z.string(),
+//   exit_profit_price: MoneyValue,
+//   exit_loss_price: MoneyValue,
+//   target_progress: z.string().nullable(),
+// })
+
+export const portfolioSchema = z.object({
   ticker: z.string(),
   name: z.string(),
   instrument_type: z.string(),
@@ -24,6 +51,15 @@ export const positionSchema = z.object({
   proportion: z.string().nullable(),
   proportion_in_portfolio: z.string().nullable(),
   profit: z.string().nullable(),
+  plan_quantity: Quotation,
+  plan_total: MoneyValue,
+  plan_proportion_in_portfolio: z.string().nullable(),
+  to_buy_lots: Quotation,
+  target_profit: z.string(),
+  exit_drawdown: z.string(),
+  exit_profit_price: MoneyValue,
+  exit_loss_price: MoneyValue,
+  target_progress: z.string().nullable(),
 })
 
 export const structureSchema = z.object({
@@ -46,7 +82,7 @@ export const structureSchema = z.object({
   })
 })
 
-export const proportionSchema = z.object({
+export const riskPartSchema = z.object({
   type: z.string(),
   sum: MoneyValue,
   proportion: z.string().nullable(),
@@ -56,5 +92,6 @@ export const proportionSchema = z.object({
   disbalance: z.number().nullable(),
 })
 
-export type Position = z.infer<typeof positionSchema>
-export type Proportion = z.infer<typeof proportionSchema>
+// export type Position = z.infer<typeof positionSchema>
+export type RiskPart = z.infer<typeof riskPartSchema>
+export type Portfolio = z.infer<typeof portfolioSchema>

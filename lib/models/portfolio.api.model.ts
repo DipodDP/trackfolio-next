@@ -51,18 +51,9 @@ export interface IPortfolioPosition {
 export interface IPlanPortfolioPosition {
   figi: string
   instrument_type: string
-  quantity: Quotation
-  average_position_price: MoneyValue
-  expected_yield: Quotation
-  current_nkd: MoneyValue
-  average_position_price_pt: Quotation
-  current_price: MoneyValue
-  average_position_price_fifo: MoneyValue
-  expected_yield_fifo: Quotation
   ticker: string;
   name: string;
   lot: number;
-  total: Quotation;
   proportion: string;
   proportion_in_portfolio: string;
   profit: null | string;
@@ -71,6 +62,11 @@ export interface IPlanPortfolioPosition {
   plan_total: MoneyValue;
   plan_proportion_in_portfolio: string;
   to_buy_lots: Quotation;
+  target_profit: string
+  exit_drawdown: string
+  exit_profit_price: MoneyValue
+  exit_loss_price: MoneyValue
+  target_progress: null | string
 }
 
 export interface ProportionInPortfolio {
@@ -89,7 +85,7 @@ export interface IPortfolioResponse {
   total_amount_etf: MoneyValue;
   total_amount_currencies: MoneyValue;
   expected_yield: Quotation;
-  positions: IPlanPortfolioPosition[];
+  positions: IPortfolioPosition[];
   account_id: string;
   total_amount_portfolio: MoneyValue;
   proportion_in_portfolio: ProportionInPortfolio;

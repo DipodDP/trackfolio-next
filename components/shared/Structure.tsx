@@ -3,8 +3,8 @@ import { z } from "zod"
 import { StructureTable } from "@/app/(root)/portfolio/structure-table"
 import { columnsStructure } from "@/app/(root)/portfolio/columns/structure-columns"
 
-import { proportionSchema } from "@/app/(root)/portfolio/data/schema"
-import { useGetPortfolio, useGetStructure } from "@/lib/react-query/queriesAndMutations"
+import { riskPartSchema } from "@/app/(root)/portfolio/data/schema"
+import { useGetStructure } from "@/lib/react-query/queriesAndMutations"
 
 
 export function Structure() {
@@ -12,8 +12,8 @@ export function Structure() {
 
   let structure
   if (dataStructure) {
+    structure = z.array(riskPartSchema).parse(dataStructure)
     console.log('Structure: ', structure)
-    structure = z.array(proportionSchema).parse(dataStructure)
   }
 
   return (

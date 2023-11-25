@@ -4,15 +4,16 @@ import { ColumnDef } from "@tanstack/react-table"
 import { Checkbox } from "@/components/ui/checkbox"
 
 import { portfolioLabels, profits } from "../data/data"
-import { Position } from "../data/schema"
+import { Portfolio } from "../data/schema"
 import { DataTableColumnHeader } from "@/components/data-table/data-table-column-header"
 import { Badge } from "@/components/ui/badge"
 import { PortfolioTableRowActions } from "@/components/data-table/portfolio-table-row-actions"
 import { MoneyValue } from "@/lib/models/portfolio.api.model"
 import { QuotationToDecimal } from "@/lib/utils"
+import NumberWithPercentage from "@/components/numeric/NumberWithPercentage"
 
 
-export const columnsPortfolio: ColumnDef<Position>[] = [
+export const columnsPortfolio: ColumnDef<Portfolio>[] = [
   // This adds a checkbox to each row and a checkbox in the header to select all rows.
   {
     id: "select",
@@ -97,7 +98,24 @@ export const columnsPortfolio: ColumnDef<Position>[] = [
     ),
     cell: ({ row }) => {
       const amount = row.getValue<MoneyValue>("total")
-      // Format the amount as a dollar amount
+      // Format the amount as a currency amount
+      const formatted = new Intl.NumberFormat("ru-RU", {
+        style: "currency",
+        currency: amount.currency,
+      }).format(QuotationToDecimal(amount))
+
+      return <div className="text-right font-medium w-[80px]">{formatted}</div>
+    },
+    enableSorting: false,
+  },
+  {
+    accessorKey: "plan_total",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Plan Total" />
+    ),
+    cell: ({ row }) => {
+      const amount = row.getValue<MoneyValue>("plan_total")
+      // Format the amount as a currency amount
       const formatted = new Intl.NumberFormat("ru-RU", {
         style: "currency",
         currency: amount.currency,
@@ -118,8 +136,9 @@ export const columnsPortfolio: ColumnDef<Position>[] = [
         style: "percent",
         maximumFractionDigits: 2
       }).format(amount)
+      const planProportion = row.original.plan_proportion_in_portfolio
 
-      return <div className="text-right font-medium w-[80px]">{formatted}</div>
+      return <NumberWithPercentage mainNumber={formatted} percentageNumber={planProportion} />
     },
   },
   {

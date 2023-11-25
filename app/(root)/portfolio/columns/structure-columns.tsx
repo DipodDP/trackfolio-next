@@ -2,13 +2,13 @@
 
 import { ColumnDef } from "@tanstack/react-table"
 
-import { Proportion } from "../data/schema"
+import { RiskPart } from "../data/schema"
 import { DataTableColumnHeader } from "@/components/data-table/data-table-column-header"
 import { MoneyValue } from "@/lib/models/portfolio.api.model"
 import { QuotationToDecimal } from "@/lib/utils"
 
 
-export const columnsStructure: ColumnDef<Proportion>[] = [
+export const columnsStructure: ColumnDef<RiskPart>[] = [
   {
     // don't know how to get row format information from data in right way, so i've create a void column
     accessorKey: "format",
@@ -50,7 +50,7 @@ export const columnsStructure: ColumnDef<Proportion>[] = [
   {
     accessorKey: "proportion",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Proportion" className="text-center" />
+      <DataTableColumnHeader column={column} title="RiskPart" className="text-center" />
     ),
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("proportion"))
@@ -116,7 +116,7 @@ export const columnsStructure: ColumnDef<Proportion>[] = [
   {
     accessorKey: "disbalance",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Proportions disbalance" className="text-center break-words w-[100px] py-2" />
+      <DataTableColumnHeader column={column} title="RiskParts disbalance" className="text-center break-words w-[100px] py-2" />
     ),
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("disbalance"))
