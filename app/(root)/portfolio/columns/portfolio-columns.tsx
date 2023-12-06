@@ -9,7 +9,7 @@ import { DataTableColumnHeader } from "@/components/data-table/data-table-column
 import { Badge } from "@/components/ui/badge"
 import { PortfolioTableRowActions } from "@/components/data-table/portfolio-table-row-actions"
 import { MoneyValue } from "@/lib/models/portfolio.api.model"
-import { QuotationToDecimal } from "@/lib/utils"
+import { formatCurrency, quotationToDecimal } from "@/lib/utils"
 import NumberWithPercentage from "@/components/numeric/NumberWithPercentage"
 
 
@@ -41,7 +41,7 @@ export const columnsPortfolio: ColumnDef<Portfolio>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Ticker" />
     ),
-    cell: ({ row }) => <div className="w-[80px]">{row.getValue("ticker")}</div>,
+    cell: ({ row }) => <div className="w-[50px] truncate">{row.getValue("ticker")}</div>,
     enableSorting: false,
     enableHiding: false,
   },
@@ -56,7 +56,7 @@ export const columnsPortfolio: ColumnDef<Portfolio>[] = [
       return (
         <div className="flex space-x-2">
           {label && <Badge variant="outline">{label.label}</Badge>}
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] truncate font-medium translate-y-[4px]">
             {row.getValue("name")}
           </span>
         </div>
@@ -73,13 +73,10 @@ export const columnsPortfolio: ColumnDef<Portfolio>[] = [
     ),
     cell: ({ row }) => {
       const amount = row.getValue<MoneyValue>("current_price")
-      // Format the amount as a dollar amount
-      const formatted = new Intl.NumberFormat("ru-RU", {
-        style: "currency",
-        currency: amount.currency,
-      }).format(QuotationToDecimal(amount))
 
-      return <div className="text-right font-medium w-[80px]">{formatted}</div>
+      return <div className="text-right font-medium tuncate w-[80px]">
+        {formatCurrency(amount)}
+      </div>
     },
     enableSorting: false,
   },
@@ -88,7 +85,7 @@ export const columnsPortfolio: ColumnDef<Portfolio>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Quantity" />
     ),
-    cell: ({ row }) => <div className="w-[80px]">{QuotationToDecimal(row.getValue("quantity"))}</div>,
+    cell: ({ row }) => <div className="w-[60px]">{quotationToDecimal(row.getValue("quantity"))}</div>,
     enableSorting: false,
   },
   {
@@ -98,13 +95,10 @@ export const columnsPortfolio: ColumnDef<Portfolio>[] = [
     ),
     cell: ({ row }) => {
       const amount = row.getValue<MoneyValue>("total")
-      // Format the amount as a currency amount
-      const formatted = new Intl.NumberFormat("ru-RU", {
-        style: "currency",
-        currency: amount.currency,
-      }).format(QuotationToDecimal(amount))
 
-      return <div className="text-right font-medium w-[80px]">{formatted}</div>
+      return <div className="text-right font-medium truncate max-w-[250px]">
+        {formatCurrency(amount)}
+      </div>
     },
     enableSorting: false,
   },
@@ -115,20 +109,17 @@ export const columnsPortfolio: ColumnDef<Portfolio>[] = [
     ),
     cell: ({ row }) => {
       const amount = row.getValue<MoneyValue>("plan_total")
-      // Format the amount as a currency amount
-      const formatted = new Intl.NumberFormat("ru-RU", {
-        style: "currency",
-        currency: amount.currency,
-      }).format(QuotationToDecimal(amount))
 
-      return <div className="text-right font-medium w-[80px]">{formatted}</div>
+      return <div className="text-right font-medium truncate max-w-[250px]">
+        {formatCurrency(amount)}
+      </div>
     },
     enableSorting: false,
   },
   {
     accessorKey: "proportion_in_portfolio",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Proportion" />
+      <DataTableColumnHeader column={column} title="Proportion" className="max-w-[100px]" />
     ),
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("proportion_in_portfolio"))
@@ -137,14 +128,19 @@ export const columnsPortfolio: ColumnDef<Portfolio>[] = [
         maximumFractionDigits: 2
       }).format(amount)
       const planProportion = row.original.plan_proportion_in_portfolio
+      const toBuy = row.original.to_buy_lots
 
-      return <NumberWithPercentage mainNumber={formatted} percentageNumber={planProportion} />
+      return <NumberWithPercentage
+        toBuy={quotationToDecimal(toBuy)}
+        mainNumber={formatted}
+        percentageNumber={planProportion}
+      />
     },
   },
   {
     accessorKey: "profit",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Profit" />
+      <DataTableColumnHeader column={column} title="Profit" className="max-w-[80px]" />
     ),
     cell: ({ row }) => {
       const profit = profits.find(
@@ -173,7 +169,46 @@ export const columnsPortfolio: ColumnDef<Portfolio>[] = [
           {profit.icon && (
             <profit.icon className="mr-2 h-4 w-4 text-muted-foreground" />
           )}
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="truncate font-medium">
+            {formatted}
+          </span>
+        </div>
+      )
+    }
+  },
+  {
+    accessorKey: "target_progress",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Target Progress" className="max-w-[80px]" />
+    ),
+    cell: ({ row }) => {
+      const profit = profits.find(
+        (profits) => {
+          if (row.getValue<number>("target_progress") >= 0) {
+            return profits.value === "high"
+          }
+          else {
+            return profits.value === "low"
+          }
+        }
+      )
+
+      if (!profit) {
+        return null
+      }
+
+      const amount = parseFloat(row.getValue("target_progress"))
+      const formatted = new Intl.NumberFormat("ru-RU", {
+        style: "percent",
+        maximumFractionDigits: 2
+      }).format(amount)
+
+      return (
+        <div className={`flex items-center ${amount < 0 ? "text-red-700" : "text-green-600"}`}>
+          {profit.icon && (
+            <profit.icon className="mr-2 h-4 w-4 text-muted-foreground" />
+          )}
+          <span className="truncate font-medium">
             {formatted}
           </span>
         </div>

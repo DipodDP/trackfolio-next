@@ -1,7 +1,5 @@
+import EditPosition from "@/components/EditPosition"
 import { Metadata } from "next"
-import { Portfolio } from "@/components/Portfolio"
-import { Structure } from "@/components/Structure"
-import Summary from "@/components/Summary"
 
 
 export const metadata: Metadata = {
@@ -13,9 +11,8 @@ export default async function Home() {
 
   return (
     <>
-      <Structure />
-      <Summary />
-      <Portfolio />
+      <EditPosition />
     </>
   )
 }
+

@@ -176,7 +176,9 @@ const config: Config = {
       colors: {
         // "primary-500": "#877EFF",
         "primary-500": "#f3a505",
+        'primary-600': '#ffa50F',
         "secondary-500": "#FFB620",
+        'off-white': '#D0DFFF',
         blue: "#0095F6",
         "logout-btn": "#FF5A5A",
         "navbar-menu": "rgba(16, 16, 18, 0.6)",
@@ -196,16 +198,23 @@ const config: Config = {
         "groups-sidebar": "-30px 0px 60px 0px rgba(28, 28, 31, 0.50)",
       },
       screens: {
-        xs: "400px",
+        xs: "480px",
+      },
+      width: {
+        '420': '420px',
+        '465': '465px',
+      },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {
-          from: { height: 0 },
+          from: { height: '0' },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
+          to: { height: '0' },
         },
       },
       animation: {

@@ -1,0 +1,278 @@
+{
+  "total_amount_shares": {
+    "currency": "rub",
+    "units": 230525,
+    "nano": 0
+  },
+  "total_amount_bonds": {
+    "currency": "rub",
+    "units": 0,
+    "nano": 0
+  },
+  "total_amount_etf": {
+    "currency": "rub",
+    "units": 0,
+    "nano": 0
+  },
+  "total_amount_currencies": {
+    "currency": "rub",
+    "units": 1765330,
+    "nano": 0
+  },
+  "total_additional_cash": {
+    "currency": "rub",
+    "units": 99948,
+    "nano": 500000000
+  },
+  "expected_yield": {
+    "units": 0,
+    "nano": 0
+  },
+  "positions": [
+    {
+      "figi": "RUB000UTSTOM",
+      "instrument_type": "currency",
+      "quantity": {
+        "units": 1765330,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "",
+        "units": 0,
+        "nano": 0
+      },
+      "expected_yield": {
+        "units": 0,
+        "nano": 0
+      },
+      "current_price": {
+        "currency": "",
+        "units": 0,
+        "nano": 0
+      },
+      "average_position_price_fifo": {
+        "currency": "",
+        "units": 0,
+        "nano": 0
+      },
+      "expected_yield_fifo": {
+        "units": 0,
+        "nano": 0
+      },
+      "ticker": "RUB000UTSTOM",
+      "name": "Российский рубль",
+      "lot": 1,
+      "total": {
+        "currency": "",
+        "units": 0,
+        "nano": 0
+      },
+      "proportion": "0.0000",
+      "proportion_in_portfolio": "0.0000",
+      "profit": null,
+      "profit_fifo": null
+    },
+    {
+      "figi": "BBG00QPYJ5H0",
+      "instrument_type": "share",
+      "quantity": {
+        "units": 50,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 3407,
+        "nano": 0
+      },
+      "expected_yield": {
+        "units": 0,
+        "nano": 0
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 3446,
+        "nano": 500000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 3407,
+        "nano": 0
+      },
+      "expected_yield_fifo": {
+        "units": 0,
+        "nano": 0
+      },
+      "ticker": "TCSG",
+      "name": "TCS Group",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 172325,
+        "nano": 0
+      },
+      "proportion": "0.7475",
+      "proportion_in_portfolio": "0.0863",
+      "profit": "0.0116",
+      "profit_fifo": "0.0116"
+    },
+    {
+      "figi": "BBG0100R9963",
+      "instrument_type": "share",
+      "quantity": {
+        "units": 15000,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 4,
+        "nano": 288000000
+      },
+      "expected_yield": {
+        "units": 0,
+        "nano": 0
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 3,
+        "nano": 880000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 4,
+        "nano": 288000000
+      },
+      "expected_yield_fifo": {
+        "units": 0,
+        "nano": 0
+      },
+      "ticker": "SGZH",
+      "name": "Сегежа",
+      "lot": 100,
+      "total": {
+        "currency": "rub",
+        "units": 58200,
+        "nano": 0
+      },
+      "proportion": "0.2525",
+      "proportion_in_portfolio": "0.0292",
+      "profit": "-0.0951",
+      "profit_fifo": "-0.0951"
+    }
+  ],
+  "account_id": "eee95472-1c22-42da-ad94-7f3ba34429f7",
+  "total_amount_portfolio": {
+    "currency": "rub",
+    "units": 1995855,
+    "nano": 0
+  },
+  "proportion_in_portfolio": {
+    "bonds": "0.00",
+    "shares": "0.12",
+    "etf": "0.00",
+    "currencies": "0.88",
+    "futures": "0.00",
+    "options": "0.00",
+    "sp": "0.00"
+  },
+  "plan_positions": [
+    {
+      "figi": "RUB000UTSTOM",
+      "instrument_type": "currency",
+      "plan_quantity": {
+        "units": 0,
+        "nano": 0
+      },
+      "ticker": "RUB000UTSTOM",
+      "name": "Российский рубль",
+      "plan_total": {
+        "currency": "",
+        "units": 0,
+        "nano": 0
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": -1765330,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "",
+        "units": 0,
+        "nano": 0
+      },
+      "exit_loss_price": {
+        "currency": "",
+        "units": 0,
+        "nano": 0
+      },
+      "target_progress": null
+    },
+    {
+      "figi": "BBG00QPYJ5H0",
+      "instrument_type": "share",
+      "plan_quantity": {
+        "units": 29,
+        "nano": 0
+      },
+      "ticker": "TCSG",
+      "name": "TCS Group",
+      "plan_total": {
+        "currency": "rub",
+        "units": 99948,
+        "nano": 500000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": -21,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 5621,
+        "nano": 550000000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 1703,
+        "nano": 500000000
+      },
+      "target_progress": "0.0178"
+    },
+    {
+      "figi": "BBG0100R9963",
+      "instrument_type": "share",
+      "plan_quantity": {
+        "units": 25800,
+        "nano": 0
+      },
+      "ticker": "SGZH",
+      "name": "Сегежа",
+      "plan_total": {
+        "currency": "rub",
+        "units": 100104,
+        "nano": 0
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 25700,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 7,
+        "nano": 75200000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 2,
+        "nano": 144000000
+      },
+      "target_progress": "-0.1491"
+    }
+  ]
+}

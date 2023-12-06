@@ -8,6 +8,8 @@ import ordersService from '@/services/orders.service'
 import { IOrder } from '../models/order.api.model'
 import { QUERY_KEYS } from './queryKeys'
 import portfolioService from '@/services/portfolio.service'
+import { getTestPortfolio, getTestStructure } from '../serverUtils'
+import { selectStructure } from './querySelectFunctions'
 
 const todoId = 1
 // const orderId = 1
@@ -40,66 +42,8 @@ export const useGetStructure = () => {
   return useQuery({
     queryKey: [QUERY_KEYS.STRUCTURE],
     queryFn: () => portfolioService.getStructure(),
-    select: ({ data: structure }) => {
-      let portfolioParts = [
-        {
-          type: "Low risk part",
-          sum: structure.current_structure.low_risk_part.low_risk_total_amount,
-          plan_sum: structure.plan_structure.low_risk_part.low_risk_total_amount,
-          proportion: structure.current_structure.low_risk_part.low_risk_total_proportion,
-          plan_proportion: structure.plan_structure.low_risk_part.low_risk_total_proportion,
-          format: true
-        },
-        {
-          type: "Gov bonds",
-          sum: structure.current_structure.low_risk_part.gov_bonds_amount,
-          plan_sum: structure.plan_structure.low_risk_part.gov_bonds_amount,
-          proportion: structure.current_structure.low_risk_part.gov_bonds_proportion,
-          plan_proportion: structure.plan_structure.low_risk_part.gov_bonds_proportion,
-          format: false
-        },
-        {
-          type: "Corp bonds",
-          sum: structure.current_structure.low_risk_part.corp_bonds_amount,
-          plan_sum: structure.plan_structure.low_risk_part.corp_bonds_amount,
-          proportion: structure.current_structure.low_risk_part.corp_bonds_proportion,
-          plan_proportion: structure.plan_structure.low_risk_part.corp_bonds_proportion,
-          format: false
-        },
-        {
-          type: "High risk part",
-          sum: structure.current_structure.high_risk_part.high_risk_total_amount,
-          plan_sum: structure.plan_structure.high_risk_part.high_risk_total_amount,
-          proportion: structure.current_structure.high_risk_part.high_risk_total_proportion,
-          plan_proportion: structure.plan_structure.high_risk_part.high_risk_total_proportion,
-          format: true
-        },
-        {
-          type: "ETF",
-          sum: structure.current_structure.high_risk_part.etf_amount,
-          plan_sum: structure.plan_structure.high_risk_part.etf_amount,
-          proportion: structure.current_structure.high_risk_part.etf_proportion,
-          plan_proportion: structure.plan_structure.high_risk_part.etf_proportion,
-          format: false
-        },
-        {
-          type: "Shares",
-          sum: structure.current_structure.high_risk_part.shares_amount,
-          plan_sum: structure.plan_structure.high_risk_part.shares_amount,
-          proportion: structure.current_structure.high_risk_part.shares_proportion,
-          plan_proportion: structure.plan_structure.high_risk_part.shares_proportion,
-          format: false
-        },
-      ]
-      portfolioParts = portfolioParts.map(item => {
-        return {
-          ...item,
-          disbalance: item.proportion !== null ? item.plan_proportion - item.proportion : null
-        }
-      })
-
-      return portfolioParts
-    }
+    // queryFn: () => getTestStructure(),
+    select: ({ data: structure }) => selectStructure(structure)
   })
 }
 
@@ -107,6 +51,7 @@ export const useGetPortfolio = () => {
   return useQuery({
     queryKey: [QUERY_KEYS.PORTFOLIO],
     queryFn: () => portfolioService.getPortfolio()
+    // queryFn: () => getTestPortfolio()
   })
 }
 

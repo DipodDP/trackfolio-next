@@ -2,7 +2,7 @@
 
 import { useActions } from "@/hooks/actions";
 import { useAppSelector } from "@/hooks/redux";
-import { IInstrumentShort } from "@/lib/models/api.model";
+import { IInstrumentShort } from "@/lib/models/portfolio.api.model";
 import { usePostOrder } from "@/lib/react-query/queriesAndMutations";
 import { useState } from "react";
 
@@ -43,12 +43,14 @@ export function AssetCard({ asset }: { asset: IInstrumentShort }) {
         <p className="text-sm font-thin">{asset?.class_code}</p>
 
         {!isFav && <button
-          className="mt-2 py-2 px-4 bg-yellow-700 rounded hover:shadow-md transition-all" onClick={addToFavourite}>
+          className="mt-2 py-2 px-4 bg-yellow-700 rounded hover:shadow-md transition-all"
+          onClick={addToFavourite}>
           Add
         </button>}
 
         {isFav && <button
-          className="mt-2 py-2 px-4 bg-red-700 rounded hover:shadow-md transition-all" onClick={removeFromFavourite}>
+          className="mt-2 py-2 px-4 bg-red-700 rounded hover:shadow-md transition-all"
+          onClick={removeFromFavourite}>
           Remove
         </button>}
         <button
@@ -57,7 +59,6 @@ export function AssetCard({ asset }: { asset: IInstrumentShort }) {
         >
           Buy
         </button>
-
       </div>
     </a>
   )

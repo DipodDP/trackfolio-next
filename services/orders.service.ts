@@ -1,4 +1,4 @@
-import { IOrder } from "@/lib/models/order.model"
+import { IOrder } from "@/lib/models/order.api.model"
 import axios from "axios"
 
 class OrdersService {

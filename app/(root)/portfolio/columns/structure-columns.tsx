@@ -5,7 +5,7 @@ import { ColumnDef } from "@tanstack/react-table"
 import { RiskPart } from "../data/schema"
 import { DataTableColumnHeader } from "@/components/data-table/data-table-column-header"
 import { MoneyValue } from "@/lib/models/portfolio.api.model"
-import { QuotationToDecimal } from "@/lib/utils"
+import { quotationToDecimal } from "@/lib/utils"
 
 
 export const columnsStructure: ColumnDef<RiskPart>[] = [
@@ -39,7 +39,7 @@ export const columnsStructure: ColumnDef<RiskPart>[] = [
       const formatted = new Intl.NumberFormat("ru-RU", {
         style: "currency",
         currency: amount.currency,
-      }).format(QuotationToDecimal(amount))
+      }).format(quotationToDecimal(amount))
 
       return <div className={`text-right w-[80px]  ${row.getValue("format") ? 'font-bold' : 'font-medium'}`}>
         {formatted}
@@ -50,7 +50,7 @@ export const columnsStructure: ColumnDef<RiskPart>[] = [
   {
     accessorKey: "proportion",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="RiskPart" className="text-center" />
+      <DataTableColumnHeader column={column} title="Risk Part" className="text-center" />
     ),
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("proportion"))
@@ -82,7 +82,7 @@ export const columnsStructure: ColumnDef<RiskPart>[] = [
       const formatted = new Intl.NumberFormat("ru-RU", {
         style: "currency",
         currency: amount.currency,
-      }).format(QuotationToDecimal(amount))
+      }).format(quotationToDecimal(amount))
 
       return <div className={`text-right w-[80px] ${row.getValue("format") ? 'font-bold' : 'font-medium'}`}>
         {formatted}
@@ -116,7 +116,7 @@ export const columnsStructure: ColumnDef<RiskPart>[] = [
   {
     accessorKey: "disbalance",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="RiskParts disbalance" className="text-center break-words w-[100px] py-2" />
+      <DataTableColumnHeader column={column} title="Risk Parts Disbalance" className="text-center break-words w-[100px] py-2" />
     ),
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("disbalance"))

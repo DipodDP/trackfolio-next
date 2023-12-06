@@ -20,6 +20,7 @@ import {
 
 import { portfolioLabels } from "@/app/(root)/portfolio/data/data"
 import { portfolioSchema } from "@/app/(root)/portfolio/data/schema"
+import Link from "next/link"
 
 interface PortfolioTableRowActionsProps<TData> {
   row: Row<TData>
@@ -42,12 +43,16 @@ export function PortfolioTableRowActions<TData>({
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[160px]">
-        <DropdownMenuItem>Edit</DropdownMenuItem>
-        <DropdownMenuItem>Make a copy</DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link href="edit-position">
+            Edit Position
+          </Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem>Show info</DropdownMenuItem>
         <DropdownMenuItem>Favorite</DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuSub>
-          <DropdownMenuSubTrigger>portfoliotypes</DropdownMenuSubTrigger>
+          <DropdownMenuSubTrigger>Asset type</DropdownMenuSubTrigger>
           <DropdownMenuSubContent>
             <DropdownMenuRadioGroup value={position.instrument_type}>
               {portfolioLabels.map((type) => (

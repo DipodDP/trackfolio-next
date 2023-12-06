@@ -5,6 +5,7 @@ import { columnsStructure } from "@/app/(root)/portfolio/columns/structure-colum
 
 import { riskPartSchema } from "@/app/(root)/portfolio/data/schema"
 import { useGetStructure } from "@/lib/react-query/queriesAndMutations"
+import Loader from "./shared/Loader"
 
 
 export function Structure() {
@@ -19,7 +20,10 @@ export function Structure() {
   return (
     <>
       {isLoading ? (
-        <div>Loading...</div>
+        <div className='flex-center gap-2'>
+          <div className="text-gray-400 min-w-max">Loading portfolio structure...</div>
+          <Loader />
+        </div>
       ) : structure ? (
         <div className="portfolio-container">
           <h1 className="head-text text-left">Structure</h1>
@@ -35,13 +39,13 @@ export function Structure() {
             <StructureTable data={structure} columns={columnsStructure} />
           </div>
 
-          <section className="mt-9 flex flex-d gap-10">
-            Section
-          </section>
+          {/* <section className="mt-9 flex flex-d gap-10"> */}
+          {/*   Section */}
+          {/* </section> */}
         </div>
 
       ) : (
-        <h2>Portfolio not found</h2>
+        <h2 className="text-gray-400">Portfolio stucture not found</h2>
       )}
     </>
   )
