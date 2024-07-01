@@ -5,17 +5,17 @@ import Summary from "@/components/Summary"
 
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "A invest portfolio tracker table build using ShadCN and Tanstack Table.",
+    title: "Portfolio",
+    description: "A invest portfolio tracker table build using ShadCN and Tanstack Table.",
 }
 
 export default async function Home() {
 
-  return (
-    <>
-      <Structure />
-      <Summary />
-      <Portfolio />
-    </>
-  )
+    return (
+        <>
+            <Structure />
+            <Summary />
+            <Portfolio />
+        </>
+    )
 }

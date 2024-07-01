@@ -5,13 +5,13 @@ import React from 'react'
 
 export function Providers(props: { children: React.ReactNode }) {
 
-  return (
-    <QueryProvider>
-      <StoreProvider>
-        <PortfolioProvider>
-          {props.children}
-        </PortfolioProvider>
-      </StoreProvider>
-    </QueryProvider>
-  )
+    return (
+        <QueryProvider>
+            <StoreProvider>
+                <PortfolioProvider>
+                    {props.children}
+                </PortfolioProvider>
+            </StoreProvider>
+        </QueryProvider>
+    )
 }

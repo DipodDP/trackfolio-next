@@ -24,8 +24,8 @@ const NumberWithPercentage: React.FC<NumberWithPercentageProps> = ({
   }
 
   return (
-    <div className="flex items-center space-x-2 w-[80px]">
-      <span className="text-right font-medium ">{mainNumber}</span>
+    <div className="flex items-center justify-end space-x-2 w-[100px]">
+      <span className="text-right font-medium">{mainNumber}</span>
       <Tooltip message={'Click to set asset target proportion in portfolio'}>
         <PopoverPlanProportion defaultValue={formatted} toBuy={toBuy}>
           <span className="bg-gray-400 rounded-full px-2 py-1 text-xs hover:text-base">

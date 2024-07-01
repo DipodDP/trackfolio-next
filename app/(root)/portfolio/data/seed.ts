@@ -51,6 +51,7 @@ export const portfolioSchema = z.object({
   proportion: z.string().nullable(),
   proportion_in_portfolio: z.string().nullable(),
   profit: z.string().nullable(),
+  profit_fifo: z.string().nullable(),
   plan_quantity: Quotation,
   plan_total: MoneyValue,
   plan_proportion_in_portfolio: z.string().nullable(),

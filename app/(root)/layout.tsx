@@ -11,41 +11,35 @@ const inter = Inter({ subsets: ["latin"] });
 
 // CEO optimization
 export const metadata: Metadata = {
-  title: "Trackfolio",
-  description: "A Next.js 13 Portfolio Tracking App.",
+    title: "Trackfolio",
+    description: "A Next.js 13 Portfolio Tracking App.",
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
+    return (
+        <html lang="en">
+            <body className={inter.className}>
+                <Providers>
+                    <Topbar />
+                    <main className="flex flex-row bg-dark-1">
 
-        <Providers>
+                        <LeftSidebar />
+                        <section className='container main-container'>
+                            <div className="w-full">
+                                {children}
+                            </div>
+                        </section>
 
-          <Topbar />
+                        <RightSidebar />
 
-          <main className="flex flex-row bg-dark-1">
-
-            <LeftSidebar />
-            <section className='container main-container'>
-              <div className="w-full">
-                {children}
-              </div>
-            </section>
-
-            <RightSidebar />
-
-          </main>
-
-          <Bottombar />
-
-        </Providers>
-
-      </body>
-    </html>
-  )
+                    </main>
+                    <Bottombar />
+                </Providers>
+            </body>
+        </html>
+    )
 }

@@ -14,7 +14,6 @@ interface PopoverProps {
   children: React.ReactNode;
 }
 
-// const PopoverPlanProportion: React.FC<PopoverProps> = ({ children, defaultValue, toBuy }) => {
 const PopoverPlanProportion: React.FC<PopoverProps> = ({ children, defaultValue, toBuy }) => {
   const [isOpen, setIsOpen] = useState(undefined as any);
   const handleClose = () => {

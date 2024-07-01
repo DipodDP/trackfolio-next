@@ -43,7 +43,7 @@ export default async function TableExample() {
 
   return (
     <>
-      // example table
+      {/* example table */}
       <div className="portfolio-container overflow-hidden rounded-[0.5rem] border bg-background shadow">
         <h1 className="head-text text-left">Tasks</h1>
         {/* <div className="container mx-auto py-10"> */}

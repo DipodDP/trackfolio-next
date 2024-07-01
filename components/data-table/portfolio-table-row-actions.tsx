@@ -20,7 +20,9 @@ import {
 
 import { portfolioLabels } from "@/app/(root)/portfolio/data/data"
 import { portfolioSchema } from "@/app/(root)/portfolio/data/schema"
-import Link from "next/link"
+// import Link from "next/link"
+import { EditPositionDialog } from "../Dialog"
+import { useState } from "react"
 
 interface PortfolioTableRowActionsProps<TData> {
   row: Row<TData>
@@ -30,6 +32,7 @@ export function PortfolioTableRowActions<TData>({
   row,
 }: PortfolioTableRowActionsProps<TData>) {
   const position = portfolioSchema.parse(row.original)
+  const [isEditOpen, setIsEditOpen] = useState(false)
 
   return (
     <DropdownMenu>
@@ -42,12 +45,18 @@ export function PortfolioTableRowActions<TData>({
           <span className="sr-only">Open menu</span>
         </Button>
       </DropdownMenuTrigger>
+      <EditPositionDialog
+        open={isEditOpen}
+        setIsOpen={setIsEditOpen}
+        position={position}
+      />
       <DropdownMenuContent align="end" className="w-[160px]">
-        <DropdownMenuItem>
-          <Link href="edit-position">
+          <DropdownMenuItem onSelect={() => setIsEditOpen(true)}>
+            {/* <Link href="edit-position"> */}
             Edit Position
-          </Link>
-        </DropdownMenuItem>
+            {/* </Link> */}
+          </DropdownMenuItem>
+        {/* <EditPositionDialog open={isEditOpen} setIsOpen={setIsEditOpen} /> */}
         <DropdownMenuItem>Show info</DropdownMenuItem>
         <DropdownMenuItem>Favorite</DropdownMenuItem>
         <DropdownMenuSeparator />

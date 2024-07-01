@@ -2,7 +2,6 @@
 
 import { IPortfolioResponse } from '@/lib/models/portfolio.api.model'
 import React, { createContext, useContext, useState } from 'react'
-
 /**
  * Creates an initial state object based on the structure of the provided sourceInterface.
  * The initial state object has the same structure as the sourceInterface, but with all properties set to empty strings.

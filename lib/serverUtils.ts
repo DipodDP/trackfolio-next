@@ -5,21 +5,21 @@ import { IPortfolioResponse, IStructureResponse } from "./models/portfolio.api.m
 
 // Simulate a database read.
 export async function getTestStructure() {
-  'use server'
-  const dataFromFile = await fs.readFile(
-    path.join(process.cwd(), "/app/(root)/portfolio/data/structure.json")
-  )
-  const data = JSON.parse(dataFromFile.toString()) as IStructureResponse
+    'use server'
+    const dataFromFile = await fs.readFile(
+        path.join(process.cwd(), "/app/(root)/portfolio/data/structure.json")
+    )
+    const data = JSON.parse(dataFromFile.toString()) as IStructureResponse
 
-  return { data: data, isLoading: false, error: false }
+    return { data: data, isLoading: false, error: false }
 }
 
 export async function getTestPortfolio() {
-  'use server'
-  const dataFromFile = await fs.readFile(
-    path.join(process.cwd(), "/app/(root)/portfolio/data/portfolio.json")
-  )
-  const data = JSON.parse(dataFromFile.toString()) as IPortfolioResponse
+    'use server'
+    const dataFromFile = await fs.readFile(
+        path.join(process.cwd(), "/app/(root)/portfolio/data/portfolio.json")
+    )
+    const data = JSON.parse(dataFromFile.toString()) as IPortfolioResponse
 
-  return { data: data, isLoading: false, error: false }
+    return { data: data, isLoading: false, error: false }
 }

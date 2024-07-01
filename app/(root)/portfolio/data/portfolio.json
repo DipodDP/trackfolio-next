@@ -1,43 +1,172 @@
 {
   "total_amount_shares": {
     "currency": "rub",
-    "units": 230525,
-    "nano": 0
+    "units": 1025639,
+    "nano": 800000000
   },
   "total_amount_bonds": {
     "currency": "rub",
-    "units": 0,
-    "nano": 0
+    "units": 550246,
+    "nano": 670000000
   },
   "total_amount_etf": {
     "currency": "rub",
-    "units": 0,
-    "nano": 0
+    "units": 116675,
+    "nano": 30000000
   },
   "total_amount_currencies": {
     "currency": "rub",
-    "units": 1765330,
-    "nano": 0
+    "units": 274733,
+    "nano": 40000000
   },
   "total_additional_cash": {
     "currency": "rub",
-    "units": 99948,
-    "nano": 500000000
-  },
-  "expected_yield": {
     "units": 0,
     "nano": 0
   },
+  "expected_yield": {
+    "units": 13,
+    "nano": 790000000
+  },
   "positions": [
     {
-      "figi": "RUB000UTSTOM",
-      "instrument_type": "currency",
+      "figi": "BBG004731032",
+      "instrument_type": "share",
       "quantity": {
-        "units": 1765330,
+        "units": 11,
         "nano": 0
       },
       "average_position_price": {
-        "currency": "",
+        "currency": "rub",
+        "units": 3551,
+        "nano": 0
+      },
+      "expected_yield": {
+        "units": 38792,
+        "nano": 10000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 7077,
+        "nano": 500000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 3551,
+        "nano": 0
+      },
+      "expected_yield_fifo": {
+        "units": 38792,
+        "nano": 10000000
+      },
+      "ticker": "LKOH",
+      "name": "ЛУКОЙЛ",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 77852,
+        "nano": 500000000
+      },
+      "proportion": "0.0759",
+      "proportion_in_portfolio": "0.0396",
+      "profit": "0.9931",
+      "profit_fifo": "0.9931"
+    },
+    {
+      "figi": "BBG00475KKY8",
+      "instrument_type": "share",
+      "quantity": {
+        "units": 60,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 1039,
+        "nano": 800000000
+      },
+      "expected_yield": {
+        "units": 28860,
+        "nano": 40000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 1520,
+        "nano": 800000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 1039,
+        "nano": 800000000
+      },
+      "expected_yield_fifo": {
+        "units": 28860,
+        "nano": 40000000
+      },
+      "ticker": "NVTK",
+      "name": "НОВАТЭК",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 91248,
+        "nano": 0
+      },
+      "proportion": "0.0890",
+      "proportion_in_portfolio": "0.0464",
+      "profit": "0.4626",
+      "profit_fifo": "0.4626"
+    },
+    {
+      "figi": "BBG006L8G4H1",
+      "instrument_type": "share",
+      "quantity": {
+        "units": 20,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 851,
+        "nano": 0
+      },
+      "expected_yield": {
+        "units": 29431,
+        "nano": 0
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 2322,
+        "nano": 600000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 851,
+        "nano": 0
+      },
+      "expected_yield_fifo": {
+        "units": 29431,
+        "nano": 0
+      },
+      "ticker": "YNDX",
+      "name": "Яндекс",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 46452,
+        "nano": 0
+      },
+      "proportion": "0.0453",
+      "proportion_in_portfolio": "0.0236",
+      "profit": "1.7293",
+      "profit_fifo": "1.7293"
+    },
+    {
+      "figi": "TCS031544546",
+      "instrument_type": "share",
+      "quantity": {
+        "units": 2000,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
         "units": 0,
         "nano": 0
       },
@@ -46,12 +175,12 @@
         "nano": 0
       },
       "current_price": {
-        "currency": "",
+        "currency": "rub",
         "units": 0,
-        "nano": 0
+        "nano": 870000000
       },
       "average_position_price_fifo": {
-        "currency": "",
+        "currency": "rub",
         "units": 0,
         "nano": 0
       },
@@ -59,220 +188,2523 @@
         "units": 0,
         "nano": 0
       },
-      "ticker": "RUB000UTSTOM",
-      "name": "Российский рубль",
+      "ticker": "GB0031544546",
+      "name": "Petropavlovsk PLC",
       "lot": 1,
       "total": {
-        "currency": "",
-        "units": 0,
+        "currency": "rub",
+        "units": 1740,
         "nano": 0
       },
-      "proportion": "0.0000",
-      "proportion_in_portfolio": "0.0000",
+      "proportion": "0.0017",
+      "proportion_in_portfolio": "0.0009",
       "profit": null,
       "profit_fifo": null
+    },
+    {
+      "figi": "IE00BK224L29",
+      "instrument_type": "etf",
+      "quantity": {
+        "units": 13000,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 1,
+        "nano": 730800000
+      },
+      "expected_yield": {
+        "units": -19121,
+        "nano": 990000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 0,
+        "nano": 260000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 1,
+        "nano": 730800000
+      },
+      "expected_yield_fifo": {
+        "units": -19121,
+        "nano": 990000000
+      },
+      "ticker": "IE00BK224L29",
+      "name": "FinEx Акции глобального рынка",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 3380,
+        "nano": 0
+      },
+      "proportion": "0.0290",
+      "proportion_in_portfolio": "0.0017",
+      "profit": "-0.8498",
+      "profit_fifo": "-0.8498"
+    },
+    {
+      "figi": "BBG000R04X57",
+      "instrument_type": "share",
+      "quantity": {
+        "units": 340,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 110,
+        "nano": 510000000
+      },
+      "expected_yield": {
+        "units": 3800,
+        "nano": 130000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 121,
+        "nano": 690000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 110,
+        "nano": 510000000
+      },
+      "expected_yield_fifo": {
+        "units": 3800,
+        "nano": 130000000
+      },
+      "ticker": "FLOT",
+      "name": "Совкомфлот",
+      "lot": 10,
+      "total": {
+        "currency": "rub",
+        "units": 41374,
+        "nano": 600000000
+      },
+      "proportion": "0.0403",
+      "proportion_in_portfolio": "0.0210",
+      "profit": "0.1012",
+      "profit_fifo": "0.1012"
+    },
+    {
+      "figi": "TCS00A1064G3",
+      "instrument_type": "bond",
+      "quantity": {
+        "units": 55,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 1008,
+        "nano": 0
+      },
+      "expected_yield": {
+        "units": -4851,
+        "nano": 0
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 919,
+        "nano": 800000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 1008,
+        "nano": 0
+      },
+      "expected_yield_fifo": {
+        "units": -4851,
+        "nano": 0
+      },
+      "ticker": "RU000A1064G3",
+      "name": "Газпромбанк 1Р-26P",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 50589,
+        "nano": 0
+      },
+      "proportion": "0.0919",
+      "proportion_in_portfolio": "0.0257",
+      "profit": "-0.0875",
+      "profit_fifo": "-0.0875"
+    },
+    {
+      "figi": "BBG000VFX6Y4",
+      "instrument_type": "share",
+      "quantity": {
+        "units": 230,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 440,
+        "nano": 450000000
+      },
+      "expected_yield": {
+        "units": 32097,
+        "nano": 0
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 580,
+        "nano": 0
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 440,
+        "nano": 450000000
+      },
+      "expected_yield_fifo": {
+        "units": 32097,
+        "nano": 0
+      },
+      "ticker": "GLTR",
+      "name": "Globaltrans Investment PLC",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 133400,
+        "nano": 0
+      },
+      "proportion": "0.1301",
+      "proportion_in_portfolio": "0.0678",
+      "profit": "0.3168",
+      "profit_fifo": "0.3168"
+    },
+    {
+      "figi": "BBG00Y91R9T3",
+      "instrument_type": "share",
+      "quantity": {
+        "units": 30,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 2077,
+        "nano": 500000000
+      },
+      "expected_yield": {
+        "units": 17113,
+        "nano": 520000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 2648,
+        "nano": 0
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 2077,
+        "nano": 500000000
+      },
+      "expected_yield_fifo": {
+        "units": 17113,
+        "nano": 520000000
+      },
+      "ticker": "OZON",
+      "name": "Ozon Holdings PLC",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 79440,
+        "nano": 0
+      },
+      "proportion": "0.0775",
+      "proportion_in_portfolio": "0.0404",
+      "profit": "0.2746",
+      "profit_fifo": "0.2746"
+    },
+    {
+      "figi": "TCS00A1066J2",
+      "instrument_type": "bond",
+      "quantity": {
+        "units": 60,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 1039,
+        "nano": 700000000
+      },
+      "expected_yield": {
+        "units": -2742,
+        "nano": 300000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 994,
+        "nano": 0
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 1039,
+        "nano": 700000000
+      },
+      "expected_yield_fifo": {
+        "units": -2742,
+        "nano": 300000000
+      },
+      "ticker": "RU000A1066J2",
+      "name": "ТГК-14 выпуск 001Р-01",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 59640,
+        "nano": 0
+      },
+      "proportion": "0.1084",
+      "proportion_in_portfolio": "0.0303",
+      "profit": "-0.0440",
+      "profit_fifo": "-0.0440"
+    },
+    {
+      "figi": "BBG0013HRTL0",
+      "instrument_type": "currency",
+      "quantity": {
+        "units": 1501,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 8,
+        "nano": 550000000
+      },
+      "expected_yield": {
+        "units": 6456,
+        "nano": 550000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 12,
+        "nano": 851500000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 8,
+        "nano": 550000000
+      },
+      "expected_yield_fifo": {
+        "units": 6456,
+        "nano": 550000000
+      },
+      "ticker": "CNYRUB_TOM",
+      "name": "Китайский юань",
+      "lot": 1000,
+      "total": {
+        "currency": "rub",
+        "units": 19290,
+        "nano": 101500000
+      },
+      "proportion": "0.0702",
+      "proportion_in_portfolio": "0.0098",
+      "profit": "0.5031",
+      "profit_fifo": "0.5031"
+    },
+    {
+      "figi": "IE00BD3QJ757",
+      "instrument_type": "etf",
+      "quantity": {
+        "units": 3,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 8228,
+        "nano": 0
+      },
+      "expected_yield": {
+        "units": -19630,
+        "nano": 0
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 1685,
+        "nano": 0
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 8228,
+        "nano": 0
+      },
+      "expected_yield_fifo": {
+        "units": -19630,
+        "nano": 0
+      },
+      "ticker": "IE00BD3QJ757",
+      "name": "FinEx Акции компаний IT-сектора США",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 5055,
+        "nano": 0
+      },
+      "proportion": "0.0433",
+      "proportion_in_portfolio": "0.0026",
+      "profit": "-0.7952",
+      "profit_fifo": "-0.7952"
+    },
+    {
+      "figi": "BBG00475KHX6",
+      "instrument_type": "share",
+      "quantity": {
+        "units": 1,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 130850,
+        "nano": 0
+      },
+      "expected_yield": {
+        "units": 8050,
+        "nano": 0
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 138900,
+        "nano": 0
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 130850,
+        "nano": 0
+      },
+      "expected_yield_fifo": {
+        "units": 8050,
+        "nano": 0
+      },
+      "ticker": "TRNFP",
+      "name": "Транснефть - привилегированные акции",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 138900,
+        "nano": 0
+      },
+      "proportion": "0.1354",
+      "proportion_in_portfolio": "0.0706",
+      "profit": "0.0615",
+      "profit_fifo": "0.0615"
     },
     {
       "figi": "BBG00QPYJ5H0",
       "instrument_type": "share",
       "quantity": {
-        "units": 50,
+        "units": 6,
         "nano": 0
       },
       "average_position_price": {
         "currency": "rub",
-        "units": 3407,
-        "nano": 0
+        "units": 2934,
+        "nano": 500000000
       },
       "expected_yield": {
-        "units": 0,
-        "nano": 0
+        "units": 977,
+        "nano": 500000000
       },
       "current_price": {
         "currency": "rub",
-        "units": 3446,
+        "units": 3097,
         "nano": 500000000
       },
       "average_position_price_fifo": {
         "currency": "rub",
-        "units": 3407,
-        "nano": 0
+        "units": 2934,
+        "nano": 500000000
       },
       "expected_yield_fifo": {
-        "units": 0,
-        "nano": 0
+        "units": 977,
+        "nano": 500000000
       },
       "ticker": "TCSG",
       "name": "TCS Group",
       "lot": 1,
       "total": {
         "currency": "rub",
-        "units": 172325,
+        "units": 18585,
         "nano": 0
       },
-      "proportion": "0.7475",
-      "proportion_in_portfolio": "0.0863",
-      "profit": "0.0116",
-      "profit_fifo": "0.0116"
+      "proportion": "0.0181",
+      "proportion_in_portfolio": "0.0094",
+      "profit": "0.0555",
+      "profit_fifo": "0.0555"
     },
     {
       "figi": "BBG0100R9963",
       "instrument_type": "share",
       "quantity": {
-        "units": 15000,
+        "units": 7800,
         "nano": 0
       },
       "average_position_price": {
         "currency": "rub",
-        "units": 4,
-        "nano": 288000000
+        "units": 3,
+        "nano": 124000000
       },
       "expected_yield": {
-        "units": 0,
-        "nano": 0
+        "units": -10682,
+        "nano": 820000000
       },
       "current_price": {
         "currency": "rub",
         "units": 3,
-        "nano": 880000000
+        "nano": 958000000
       },
       "average_position_price_fifo": {
         "currency": "rub",
-        "units": 4,
-        "nano": 288000000
+        "units": 5,
+        "nano": 327000000
       },
       "expected_yield_fifo": {
-        "units": 0,
-        "nano": 0
+        "units": -10682,
+        "nano": 820000000
       },
       "ticker": "SGZH",
       "name": "Сегежа",
       "lot": 100,
       "total": {
         "currency": "rub",
-        "units": 58200,
+        "units": 30872,
+        "nano": 400000000
+      },
+      "proportion": "0.0301",
+      "proportion_in_portfolio": "0.0157",
+      "profit": "0.2670",
+      "profit_fifo": "-0.2570"
+    },
+    {
+      "figi": "TCSS0A105A95",
+      "instrument_type": "bond",
+      "quantity": {
+        "units": 2,
         "nano": 0
       },
-      "proportion": "0.2525",
-      "proportion_in_portfolio": "0.0292",
-      "profit": "-0.0951",
-      "profit_fifo": "-0.0951"
+      "average_position_price": {
+        "currency": "rub",
+        "units": 93542,
+        "nano": 953407000
+      },
+      "expected_yield": {
+        "units": 20207,
+        "nano": 310000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 103646,
+        "nano": 607416600
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 93542,
+        "nano": 953407000
+      },
+      "expected_yield_fifo": {
+        "units": 20207,
+        "nano": 310000000
+      },
+      "ticker": "RU000A105A95",
+      "name": "Газпром 2034",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 207293,
+        "nano": 214833200
+      },
+      "proportion": "0.3767",
+      "proportion_in_portfolio": "0.1054",
+      "profit": "0.1080",
+      "profit_fifo": "0.1080"
+    },
+    {
+      "figi": "BBG00Q3HQJ74",
+      "instrument_type": "etf",
+      "quantity": {
+        "units": 27,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "eur",
+        "units": 11,
+        "nano": 100000000
+      },
+      "expected_yield": {
+        "units": 32,
+        "nano": 140000000
+      },
+      "current_price": {
+        "currency": "eur",
+        "units": 12,
+        "nano": 290000000
+      },
+      "average_position_price_fifo": {
+        "currency": "eur",
+        "units": 11,
+        "nano": 100000000
+      },
+      "expected_yield_fifo": {
+        "units": 32,
+        "nano": 140000000
+      },
+      "ticker": "AKEU",
+      "name": "Альфа-Капитал Европа 600",
+      "lot": 1,
+      "total": {
+        "currency": "eur",
+        "units": 331,
+        "nano": 830000000
+      },
+      "proportion": "0.0028",
+      "proportion_in_portfolio": "0.0002",
+      "profit": "0.1072",
+      "profit_fifo": "0.1072"
+    },
+    {
+      "figi": "BBG0013HGFT4",
+      "instrument_type": "currency",
+      "quantity": {
+        "units": 8,
+        "nano": 300000000
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 79,
+        "nano": 302500000
+      },
+      "expected_yield": {
+        "units": 94,
+        "nano": 40000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 92,
+        "nano": 100000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 80,
+        "nano": 770000000
+      },
+      "expected_yield_fifo": {
+        "units": 94,
+        "nano": 40000000
+      },
+      "ticker": "USD000UTSTOM",
+      "name": "Доллар США",
+      "lot": 1000,
+      "total": {
+        "currency": "rub",
+        "units": 764,
+        "nano": 430000000
+      },
+      "proportion": "0.0028",
+      "proportion_in_portfolio": "0.0004",
+      "profit": "0.1614",
+      "profit_fifo": "0.1403"
+    },
+    {
+      "figi": "BBG004S681M2",
+      "instrument_type": "share",
+      "quantity": {
+        "units": 1300,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 36,
+        "nano": 85000000
+      },
+      "expected_yield": {
+        "units": 25463,
+        "nano": 520000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 55,
+        "nano": 670000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 36,
+        "nano": 85000000
+      },
+      "expected_yield_fifo": {
+        "units": 25463,
+        "nano": 520000000
+      },
+      "ticker": "SNGSP",
+      "name": "Сургутнефтегаз - привилегированные акции",
+      "lot": 100,
+      "total": {
+        "currency": "rub",
+        "units": 72371,
+        "nano": 0
+      },
+      "proportion": "0.0706",
+      "proportion_in_portfolio": "0.0368",
+      "profit": "0.5427",
+      "profit_fifo": "0.5427"
+    },
+    {
+      "figi": "RUB000UTSTOM",
+      "instrument_type": "currency",
+      "quantity": {
+        "units": 244693,
+        "nano": 990000000
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 1,
+        "nano": 0
+      },
+      "expected_yield": {
+        "units": 0,
+        "nano": 0
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 1,
+        "nano": 0
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 1,
+        "nano": 0
+      },
+      "expected_yield_fifo": {
+        "units": 0,
+        "nano": 0
+      },
+      "ticker": "RUB000UTSTOM",
+      "name": "Российский рубль",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 244693,
+        "nano": 990000000
+      },
+      "proportion": "0.8907",
+      "proportion_in_portfolio": "0.1244",
+      "profit": "0.0000",
+      "profit_fifo": "0.0000"
+    },
+    {
+      "figi": "BBG0013HJJ31",
+      "instrument_type": "currency",
+      "quantity": {
+        "units": 100,
+        "nano": 410000000
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 53,
+        "nano": 667500000
+      },
+      "expected_yield": {
+        "units": 4595,
+        "nano": 880000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 99,
+        "nano": 437500000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 53,
+        "nano": 667500000
+      },
+      "expected_yield_fifo": {
+        "units": 4595,
+        "nano": 880000000
+      },
+      "ticker": "EUR_RUB__TOM",
+      "name": "Евро",
+      "lot": 1000,
+      "total": {
+        "currency": "rub",
+        "units": 9984,
+        "nano": 519375000
+      },
+      "proportion": "0.0363",
+      "proportion_in_portfolio": "0.0051",
+      "profit": "0.8528",
+      "profit_fifo": "0.8528"
+    },
+    {
+      "figi": "TCS00A106YF0",
+      "instrument_type": "share",
+      "quantity": {
+        "units": 10,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 1789,
+        "nano": 200000000
+      },
+      "expected_yield": {
+        "units": -12121,
+        "nano": 800000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 577,
+        "nano": 200000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 1789,
+        "nano": 200000000
+      },
+      "expected_yield_fifo": {
+        "units": -12121,
+        "nano": 800000000
+      },
+      "ticker": "VKCO",
+      "name": "ВК",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 5772,
+        "nano": 0
+      },
+      "proportion": "0.0056",
+      "proportion_in_portfolio": "0.0029",
+      "profit": "-0.6774",
+      "profit_fifo": "-0.6774"
+    },
+    {
+      "figi": "IE00BK224M36",
+      "instrument_type": "etf",
+      "quantity": {
+        "units": 6000,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 0,
+        "nano": 943400000
+      },
+      "expected_yield": {
+        "units": -5061,
+        "nano": 600000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 0,
+        "nano": 100000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 0,
+        "nano": 943400000
+      },
+      "expected_yield_fifo": {
+        "units": -5061,
+        "nano": 600000000
+      },
+      "ticker": "IE00BK224M36",
+      "name": "FinEx Акции глобального рынка",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 600,
+        "nano": 0
+      },
+      "proportion": "0.0051",
+      "proportion_in_portfolio": "0.0003",
+      "profit": "-0.8940",
+      "profit_fifo": "-0.8940"
+    },
+    {
+      "figi": "TCS00A105EX7",
+      "instrument_type": "share",
+      "quantity": {
+        "units": 150,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 181,
+        "nano": 520000000
+      },
+      "expected_yield": {
+        "units": 4341,
+        "nano": 0
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 209,
+        "nano": 590000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 180,
+        "nano": 650000000
+      },
+      "expected_yield_fifo": {
+        "units": 4341,
+        "nano": 0
+      },
+      "ticker": "WUSH",
+      "name": "Whoosh",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 31438,
+        "nano": 500000000
+      },
+      "proportion": "0.0307",
+      "proportion_in_portfolio": "0.0160",
+      "profit": "0.1546",
+      "profit_fifo": "0.1602"
+    },
+    {
+      "figi": "BBG004RVFCY3",
+      "instrument_type": "share",
+      "quantity": {
+        "units": 15,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 4870,
+        "nano": 500000000
+      },
+      "expected_yield": {
+        "units": 20647,
+        "nano": 530000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 6247,
+        "nano": 0
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 4870,
+        "nano": 500000000
+      },
+      "expected_yield_fifo": {
+        "units": 20647,
+        "nano": 530000000
+      },
+      "ticker": "MGNT",
+      "name": "Магнит",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 93705,
+        "nano": 0
+      },
+      "proportion": "0.0914",
+      "proportion_in_portfolio": "0.0476",
+      "profit": "0.2826",
+      "profit_fifo": "0.2826"
+    },
+    {
+      "figi": "TCS00A1062M5",
+      "instrument_type": "bond",
+      "quantity": {
+        "units": 2,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 5518,
+        "nano": 515870000
+      },
+      "expected_yield": {
+        "units": 616,
+        "nano": 780000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 5827,
+        "nano": 385802000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 5518,
+        "nano": 515870000
+      },
+      "expected_yield_fifo": {
+        "units": 616,
+        "nano": 780000000
+      },
+      "ticker": "RU000A1062M5",
+      "name": "Селигдар Золотые облигации",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 11654,
+        "nano": 771604000
+      },
+      "proportion": "0.0212",
+      "proportion_in_portfolio": "0.0059",
+      "profit": "0.0560",
+      "profit_fifo": "0.0560"
+    },
+    {
+      "figi": "BBG004S681W1",
+      "instrument_type": "share",
+      "quantity": {
+        "units": 4,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 326,
+        "nano": 150000000
+      },
+      "expected_yield": {
+        "units": -300,
+        "nano": 290000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 251,
+        "nano": 200000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 326,
+        "nano": 150000000
+      },
+      "expected_yield_fifo": {
+        "units": -300,
+        "nano": 290000000
+      },
+      "ticker": "MTSS",
+      "name": "МТС",
+      "lot": 10,
+      "total": {
+        "currency": "rub",
+        "units": 1004,
+        "nano": 800000000
+      },
+      "proportion": "0.0010",
+      "proportion_in_portfolio": "0.0005",
+      "profit": "-0.2298",
+      "profit_fifo": "-0.2298"
+    },
+    {
+      "figi": "BBG00NTZWLM4",
+      "instrument_type": "etf",
+      "quantity": {
+        "units": 30,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 1506,
+        "nano": 800000000
+      },
+      "expected_yield": {
+        "units": 6408,
+        "nano": 200000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 1720,
+        "nano": 400000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 1506,
+        "nano": 800000000
+      },
+      "expected_yield_fifo": {
+        "units": 6408,
+        "nano": 200000000
+      },
+      "ticker": "SBSP",
+      "name": "Первая – Фонд Американские акции",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 51612,
+        "nano": 0
+      },
+      "proportion": "0.4424",
+      "proportion_in_portfolio": "0.0262",
+      "profit": "0.1418",
+      "profit_fifo": "0.1418"
+    },
+    {
+      "figi": "BBG00PVNWQ15",
+      "instrument_type": "etf",
+      "quantity": {
+        "units": 50,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "usd",
+        "units": 1,
+        "nano": 331000000
+      },
+      "expected_yield": {
+        "units": -11,
+        "nano": 250000000
+      },
+      "current_price": {
+        "currency": "usd",
+        "units": 1,
+        "nano": 116000000
+      },
+      "average_position_price_fifo": {
+        "currency": "usd",
+        "units": 1,
+        "nano": 331000000
+      },
+      "expected_yield_fifo": {
+        "units": -11,
+        "nano": 250000000
+      },
+      "ticker": "RSHE",
+      "name": "РСХБ – Фонд Акций развивающихся стран",
+      "lot": 10,
+      "total": {
+        "currency": "usd",
+        "units": 55,
+        "nano": 800000000
+      },
+      "proportion": "0.0005",
+      "proportion_in_portfolio": "0.0000",
+      "profit": "-0.1615",
+      "profit_fifo": "-0.1615"
+    },
+    {
+      "figi": "BBG004730N88",
+      "instrument_type": "share",
+      "quantity": {
+        "units": 450,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 101,
+        "nano": 250000000
+      },
+      "expected_yield": {
+        "units": 73833,
+        "nano": 210000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 265,
+        "nano": 320000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 101,
+        "nano": 250000000
+      },
+      "expected_yield_fifo": {
+        "units": 73833,
+        "nano": 210000000
+      },
+      "ticker": "SBER",
+      "name": "Сбер Банк",
+      "lot": 10,
+      "total": {
+        "currency": "rub",
+        "units": 119394,
+        "nano": 0
+      },
+      "proportion": "0.1164",
+      "proportion_in_portfolio": "0.0607",
+      "profit": "1.6204",
+      "profit_fifo": "1.6204"
+    },
+    {
+      "figi": "TCS00A105ZX2",
+      "instrument_type": "bond",
+      "quantity": {
+        "units": 60,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 1002,
+        "nano": 100000000
+      },
+      "expected_yield": {
+        "units": -3720,
+        "nano": 100000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 940,
+        "nano": 100000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 1002,
+        "nano": 100000000
+      },
+      "expected_yield_fifo": {
+        "units": -3720,
+        "nano": 100000000
+      },
+      "ticker": "RU000A105ZX2",
+      "name": "Борец Капитал 1P-01",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 56406,
+        "nano": 0
+      },
+      "proportion": "0.1025",
+      "proportion_in_portfolio": "0.0287",
+      "profit": "-0.0619",
+      "profit_fifo": "-0.0619"
+    },
+    {
+      "figi": "TCS00A105VU7",
+      "instrument_type": "bond",
+      "quantity": {
+        "units": 85,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 1018,
+        "nano": 700000000
+      },
+      "expected_yield": {
+        "units": -3816,
+        "nano": 500000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 973,
+        "nano": 800000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 1018,
+        "nano": 700000000
+      },
+      "expected_yield_fifo": {
+        "units": -3816,
+        "nano": 500000000
+      },
+      "ticker": "RU000A105VU7",
+      "name": "Эталон выпуск 002Р-01",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 82773,
+        "nano": 0
+      },
+      "proportion": "0.1504",
+      "proportion_in_portfolio": "0.0421",
+      "profit": "-0.0441",
+      "profit_fifo": "-0.0441"
+    },
+    {
+      "figi": "TCS00A106R95",
+      "instrument_type": "bond",
+      "quantity": {
+        "units": 75,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 1012,
+        "nano": 600000000
+      },
+      "expected_yield": {
+        "units": -2630,
+        "nano": 500000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 977,
+        "nano": 500000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 1012,
+        "nano": 600000000
+      },
+      "expected_yield_fifo": {
+        "units": -2630,
+        "nano": 500000000
+      },
+      "ticker": "RU000A106R95",
+      "name": "Селектел выпуск 3",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 73312,
+        "nano": 500000000
+      },
+      "proportion": "0.1332",
+      "proportion_in_portfolio": "0.0373",
+      "profit": "-0.0347",
+      "profit_fifo": "-0.0347"
+    },
+    {
+      "figi": "BBG004731354",
+      "instrument_type": "share",
+      "quantity": {
+        "units": 75,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 574,
+        "nano": 0
+      },
+      "expected_yield": {
+        "units": -960,
+        "nano": 0
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 561,
+        "nano": 200000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 574,
+        "nano": 0
+      },
+      "expected_yield_fifo": {
+        "units": -960,
+        "nano": 0
+      },
+      "ticker": "ROSN",
+      "name": "Роснефть",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 42090,
+        "nano": 0
+      },
+      "proportion": "0.0410",
+      "proportion_in_portfolio": "0.0214",
+      "profit": "-0.0223",
+      "profit_fifo": "-0.0223"
+    },
+    {
+      "figi": "BBG005N1KZX4",
+      "instrument_type": "etf",
+      "quantity": {
+        "units": 250,
+        "nano": 0
+      },
+      "average_position_price": {
+        "currency": "rub",
+        "units": 87,
+        "nano": 170000000
+      },
+      "expected_yield": {
+        "units": -3899,
+        "nano": 100000000
+      },
+      "current_price": {
+        "currency": "rub",
+        "units": 71,
+        "nano": 570000000
+      },
+      "average_position_price_fifo": {
+        "currency": "rub",
+        "units": 87,
+        "nano": 170000000
+      },
+      "expected_yield_fifo": {
+        "units": -3899,
+        "nano": 100000000
+      },
+      "ticker": "FXRU",
+      "name": "FinEx Еврооблигации рос. компаний (USD)",
+      "lot": 1,
+      "total": {
+        "currency": "rub",
+        "units": 17892,
+        "nano": 500000000
+      },
+      "proportion": "0.1534",
+      "proportion_in_portfolio": "0.0091",
+      "profit": "-0.1790",
+      "profit_fifo": "-0.1790"
     }
   ],
-  "account_id": "eee95472-1c22-42da-ad94-7f3ba34429f7",
+  "account_id": "2168069710",
   "total_amount_portfolio": {
     "currency": "rub",
-    "units": 1995855,
-    "nano": 0
+    "units": 1967294,
+    "nano": 540000000
   },
   "proportion_in_portfolio": {
-    "bonds": "0.00",
-    "shares": "0.12",
-    "etf": "0.00",
-    "currencies": "0.88",
+    "bonds": "0.28",
+    "shares": "0.52",
+    "etf": "0.06",
+    "currencies": "0.14",
     "futures": "0.00",
     "options": "0.00",
     "sp": "0.00"
   },
   "plan_positions": [
     {
-      "figi": "RUB000UTSTOM",
-      "instrument_type": "currency",
+      "figi": "BBG004731032",
+      "instrument_type": "share",
       "plan_quantity": {
-        "units": 0,
+        "units": 14,
         "nano": 0
       },
-      "ticker": "RUB000UTSTOM",
-      "name": "Российский рубль",
+      "ticker": "LKOH",
+      "name": "ЛУКОЙЛ",
       "plan_total": {
-        "currency": "",
-        "units": 0,
+        "currency": "rub",
+        "units": 99085,
         "nano": 0
       },
       "plan_proportion_in_portfolio": "0.0500",
       "to_buy_lots": {
-        "units": -1765330,
+        "units": 3,
         "nano": 0
       },
       "target_profit": "1.6500",
       "exit_drawdown": "0.5000",
       "exit_profit_price": {
-        "currency": "",
+        "currency": "rub",
+        "units": 5859,
+        "nano": 150000000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 1775,
+        "nano": 500000000
+      },
+      "target_progress": "1.5278"
+    },
+    {
+      "figi": "BBG00475KKY8",
+      "instrument_type": "share",
+      "plan_quantity": {
+        "units": 65,
+        "nano": 0
+      },
+      "ticker": "NVTK",
+      "name": "НОВАТЭК",
+      "plan_total": {
+        "currency": "rub",
+        "units": 98852,
+        "nano": 0
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 5,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 1715,
+        "nano": 670000000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 519,
+        "nano": 900000000
+      },
+      "target_progress": "0.7117"
+    },
+    {
+      "figi": "BBG006L8G4H1",
+      "instrument_type": "share",
+      "plan_quantity": {
+        "units": 43,
+        "nano": 0
+      },
+      "ticker": "YNDX",
+      "name": "Яндекс",
+      "plan_total": {
+        "currency": "rub",
+        "units": 99871,
+        "nano": 800000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 23,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 1404,
+        "nano": 150000000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 425,
+        "nano": 500000000
+      },
+      "target_progress": "2.6604"
+    },
+    {
+      "figi": "TCS031544546",
+      "instrument_type": "share",
+      "plan_quantity": {
+        "units": 113063,
+        "nano": 0
+      },
+      "ticker": "GB0031544546",
+      "name": "Petropavlovsk PLC",
+      "plan_total": {
+        "currency": "rub",
+        "units": 98364,
+        "nano": 810000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 111063,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
         "units": 0,
         "nano": 0
       },
       "exit_loss_price": {
-        "currency": "",
+        "currency": "rub",
         "units": 0,
         "nano": 0
       },
       "target_progress": null
     },
     {
+      "figi": "IE00BK224L29",
+      "instrument_type": "etf",
+      "plan_quantity": {
+        "units": 378326,
+        "nano": 0
+      },
+      "ticker": "IE00BK224L29",
+      "name": "FinEx Акции глобального рынка",
+      "plan_total": {
+        "currency": "rub",
+        "units": 98364,
+        "nano": 760000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 365326,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 2,
+        "nano": 855820000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 0,
+        "nano": 865400000
+      },
+      "target_progress": "0.7762"
+    },
+    {
+      "figi": "BBG000R04X57",
+      "instrument_type": "share",
+      "plan_quantity": {
+        "units": 810,
+        "nano": 0
+      },
+      "ticker": "FLOT",
+      "name": "Совкомфлот",
+      "plan_total": {
+        "currency": "rub",
+        "units": 98568,
+        "nano": 900000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 780,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 182,
+        "nano": 341500000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 55,
+        "nano": 255000000
+      },
+      "target_progress": "0.1556"
+    },
+    {
+      "figi": "TCS00A1064G3",
+      "instrument_type": "bond",
+      "plan_quantity": {
+        "units": 107,
+        "nano": 0
+      },
+      "ticker": "RU000A1064G3",
+      "name": "Газпромбанк 1Р-26P",
+      "plan_total": {
+        "currency": "rub",
+        "units": 98418,
+        "nano": 600000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 52,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 1663,
+        "nano": 200000000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 504,
+        "nano": 0
+      },
+      "target_progress": "-0.1507"
+    },
+    {
+      "figi": "BBG000VFX6Y4",
+      "instrument_type": "share",
+      "plan_quantity": {
+        "units": 170,
+        "nano": 0
+      },
+      "ticker": "GLTR",
+      "name": "Globaltrans Investment PLC",
+      "plan_total": {
+        "currency": "rub",
+        "units": 98600,
+        "nano": 0
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": -60,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 726,
+        "nano": 742500000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 220,
+        "nano": 225000000
+      },
+      "target_progress": "0.4874"
+    },
+    {
+      "figi": "BBG00Y91R9T3",
+      "instrument_type": "share",
+      "plan_quantity": {
+        "units": 38,
+        "nano": 0
+      },
+      "ticker": "OZON",
+      "name": "Ozon Holdings PLC",
+      "plan_total": {
+        "currency": "rub",
+        "units": 100624,
+        "nano": 0
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 8,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 3427,
+        "nano": 875000000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 1038,
+        "nano": 750000000
+      },
+      "target_progress": "0.4225"
+    },
+    {
+      "figi": "TCS00A1066J2",
+      "instrument_type": "bond",
+      "plan_quantity": {
+        "units": 99,
+        "nano": 0
+      },
+      "ticker": "RU000A1066J2",
+      "name": "ТГК-14 выпуск 001Р-01",
+      "plan_total": {
+        "currency": "rub",
+        "units": 98406,
+        "nano": 0
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 39,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 1715,
+        "nano": 505000000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 519,
+        "nano": 850000000
+      },
+      "target_progress": "-0.1590"
+    },
+    {
+      "figi": "BBG0013HRTL0",
+      "instrument_type": "currency",
+      "plan_quantity": {
+        "units": 8000,
+        "nano": 0
+      },
+      "ticker": "CNYRUB_TOM",
+      "name": "Китайский юань",
+      "plan_total": {
+        "currency": "rub",
+        "units": 102812,
+        "nano": 0
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 8000,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 14,
+        "nano": 107500000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 4,
+        "nano": 275000000
+      },
+      "target_progress": "0.7740"
+    },
+    {
+      "figi": "IE00BD3QJ757",
+      "instrument_type": "etf",
+      "plan_quantity": {
+        "units": 59,
+        "nano": 0
+      },
+      "ticker": "IE00BD3QJ757",
+      "name": "FinEx Акции компаний IT-сектора США",
+      "plan_total": {
+        "currency": "rub",
+        "units": 99415,
+        "nano": 0
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 56,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 13576,
+        "nano": 200000000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 4114,
+        "nano": 0
+      },
+      "target_progress": "0.4805"
+    },
+    {
+      "figi": "BBG00475KHX6",
+      "instrument_type": "share",
+      "plan_quantity": {
+        "units": 1,
+        "nano": 0
+      },
+      "ticker": "TRNFP",
+      "name": "Транснефть - привилегированные акции",
+      "plan_total": {
+        "currency": "rub",
+        "units": 138900,
+        "nano": 0
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 0,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 215902,
+        "nano": 500000000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 65425,
+        "nano": 0
+      },
+      "target_progress": "0.0946"
+    },
+    {
       "figi": "BBG00QPYJ5H0",
       "instrument_type": "share",
       "plan_quantity": {
-        "units": 29,
+        "units": 32,
         "nano": 0
       },
       "ticker": "TCSG",
       "name": "TCS Group",
       "plan_total": {
         "currency": "rub",
-        "units": 99948,
-        "nano": 500000000
+        "units": 99120,
+        "nano": 0
       },
       "plan_proportion_in_portfolio": "0.0500",
       "to_buy_lots": {
-        "units": -21,
+        "units": 26,
         "nano": 0
       },
       "target_profit": "1.6500",
       "exit_drawdown": "0.5000",
       "exit_profit_price": {
         "currency": "rub",
-        "units": 5621,
-        "nano": 550000000
+        "units": 4841,
+        "nano": 925000000
       },
       "exit_loss_price": {
         "currency": "rub",
-        "units": 1703,
-        "nano": 500000000
+        "units": 1467,
+        "nano": 250000000
       },
-      "target_progress": "0.0178"
+      "target_progress": "0.0855"
     },
     {
       "figi": "BBG0100R9963",
       "instrument_type": "share",
       "plan_quantity": {
-        "units": 25800,
+        "units": 24900,
         "nano": 0
       },
       "ticker": "SGZH",
       "name": "Сегежа",
       "plan_total": {
         "currency": "rub",
-        "units": 100104,
-        "nano": 0
+        "units": 98554,
+        "nano": 200000000
       },
       "plan_proportion_in_portfolio": "0.0500",
       "to_buy_lots": {
-        "units": 25700,
+        "units": 24900,
         "nano": 0
       },
       "target_profit": "1.6500",
       "exit_drawdown": "0.5000",
       "exit_profit_price": {
         "currency": "rub",
-        "units": 7,
-        "nano": 75200000
+        "units": 5,
+        "nano": 154600000
       },
       "exit_loss_price": {
         "currency": "rub",
-        "units": 2,
-        "nano": 144000000
+        "units": 1,
+        "nano": 562000000
       },
-      "target_progress": "-0.1491"
+      "target_progress": "0.4107"
+    },
+    {
+      "figi": "TCSS0A105A95",
+      "instrument_type": "bond",
+      "plan_quantity": {
+        "units": 1,
+        "nano": 0
+      },
+      "ticker": "RU000A105A95",
+      "name": "Газпром 2034",
+      "plan_total": {
+        "currency": "rub",
+        "units": 103646,
+        "nano": 607416600
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": -1,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 154345,
+        "nano": 873121550
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 46771,
+        "nano": 476703500
+      },
+      "target_progress": "0.1662"
+    },
+    {
+      "figi": "BBG00Q3HQJ74",
+      "instrument_type": "etf",
+      "plan_quantity": {
+        "units": 8004,
+        "nano": 0
+      },
+      "ticker": "AKEU",
+      "name": "Альфа-Капитал Европа 600",
+      "plan_total": {
+        "currency": "eur",
+        "units": 98369,
+        "nano": 160000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 7977,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "eur",
+        "units": 18,
+        "nano": 315000000
+      },
+      "exit_loss_price": {
+        "currency": "eur",
+        "units": 5,
+        "nano": 550000000
+      },
+      "target_progress": "0.1649"
+    },
+    {
+      "figi": "BBG0013HGFT4",
+      "instrument_type": "currency",
+      "plan_quantity": {
+        "units": 2000,
+        "nano": 0
+      },
+      "ticker": "USD000UTSTOM",
+      "name": "Доллар США",
+      "plan_total": {
+        "currency": "rub",
+        "units": 184200,
+        "nano": 0
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 2000,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 130,
+        "nano": 849125000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 39,
+        "nano": 651250000
+      },
+      "target_progress": "0.2483"
+    },
+    {
+      "figi": "BBG004S681M2",
+      "instrument_type": "share",
+      "plan_quantity": {
+        "units": 1800,
+        "nano": 0
+      },
+      "ticker": "SNGSP",
+      "name": "Сургутнефтегаз - привилегированные акции",
+      "plan_total": {
+        "currency": "rub",
+        "units": 100206,
+        "nano": 0
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 1800,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 59,
+        "nano": 540250000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 18,
+        "nano": 42500000
+      },
+      "target_progress": "0.8350"
+    },
+    {
+      "figi": "RUB000UTSTOM",
+      "instrument_type": "currency",
+      "plan_quantity": {
+        "units": 98365,
+        "nano": 0
+      },
+      "ticker": "RUB000UTSTOM",
+      "name": "Российский рубль",
+      "plan_total": {
+        "currency": "rub",
+        "units": 98365,
+        "nano": 0
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": -146328,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 1,
+        "nano": 650000000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 0,
+        "nano": 500000000
+      },
+      "target_progress": "0.0000"
+    },
+    {
+      "figi": "BBG0013HJJ31",
+      "instrument_type": "currency",
+      "plan_quantity": {
+        "units": 1000,
+        "nano": 0
+      },
+      "ticker": "EUR_RUB__TOM",
+      "name": "Евро",
+      "plan_total": {
+        "currency": "rub",
+        "units": 99437,
+        "nano": 500000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 1000,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 88,
+        "nano": 551375000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 26,
+        "nano": 833750000
+      },
+      "target_progress": "1.3121"
+    },
+    {
+      "figi": "TCS00A106YF0",
+      "instrument_type": "share",
+      "plan_quantity": {
+        "units": 171,
+        "nano": 0
+      },
+      "ticker": "VKCO",
+      "name": "ВК",
+      "plan_total": {
+        "currency": "rub",
+        "units": 98701,
+        "nano": 200000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 161,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 2952,
+        "nano": 180000000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 894,
+        "nano": 600000000
+      },
+      "target_progress": "0.1833"
+    },
+    {
+      "figi": "IE00BK224M36",
+      "instrument_type": "etf",
+      "plan_quantity": {
+        "units": 983648,
+        "nano": 0
+      },
+      "ticker": "IE00BK224M36",
+      "name": "FinEx Акции глобального рынка",
+      "plan_total": {
+        "currency": "rub",
+        "units": 98364,
+        "nano": 800000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 977648,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 1,
+        "nano": 556610000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 0,
+        "nano": 471700000
+      },
+      "target_progress": "1.2390"
+    },
+    {
+      "figi": "TCS00A105EX7",
+      "instrument_type": "share",
+      "plan_quantity": {
+        "units": 470,
+        "nano": 0
+      },
+      "ticker": "WUSH",
+      "name": "Whoosh",
+      "plan_total": {
+        "currency": "rub",
+        "units": 98507,
+        "nano": 300000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 320,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 299,
+        "nano": 508000000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 90,
+        "nano": 760000000
+      },
+      "target_progress": "0.2379"
+    },
+    {
+      "figi": "BBG004RVFCY3",
+      "instrument_type": "share",
+      "plan_quantity": {
+        "units": 16,
+        "nano": 0
+      },
+      "ticker": "MGNT",
+      "name": "Магнит",
+      "plan_total": {
+        "currency": "rub",
+        "units": 99952,
+        "nano": 0
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 1,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 8036,
+        "nano": 325000000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 2435,
+        "nano": 250000000
+      },
+      "target_progress": "0.4348"
+    },
+    {
+      "figi": "TCS00A1062M5",
+      "instrument_type": "bond",
+      "plan_quantity": {
+        "units": 17,
+        "nano": 0
+      },
+      "ticker": "RU000A1062M5",
+      "name": "Селигдар Золотые облигации",
+      "plan_total": {
+        "currency": "rub",
+        "units": 99065,
+        "nano": 558634000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 15,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 9105,
+        "nano": 551185500
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 2759,
+        "nano": 257935000
+      },
+      "target_progress": "0.0861"
+    },
+    {
+      "figi": "BBG004S681W1",
+      "instrument_type": "share",
+      "plan_quantity": {
+        "units": 400,
+        "nano": 0
+      },
+      "ticker": "MTSS",
+      "name": "МТС",
+      "plan_total": {
+        "currency": "rub",
+        "units": 100480,
+        "nano": 0
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 400,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 538,
+        "nano": 147500000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 163,
+        "nano": 75000000
+      },
+      "target_progress": "-0.1169"
+    },
+    {
+      "figi": "BBG00NTZWLM4",
+      "instrument_type": "etf",
+      "plan_quantity": {
+        "units": 58,
+        "nano": 0
+      },
+      "ticker": "SBSP",
+      "name": "Первая – Фонд Американские акции",
+      "plan_total": {
+        "currency": "rub",
+        "units": 99783,
+        "nano": 200000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 28,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 2486,
+        "nano": 220000000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 753,
+        "nano": 400000000
+      },
+      "target_progress": "0.2181"
+    },
+    {
+      "figi": "BBG00PVNWQ15",
+      "instrument_type": "etf",
+      "plan_quantity": {
+        "units": 88150,
+        "nano": 0
+      },
+      "ticker": "RSHE",
+      "name": "РСХБ – Фонд Акций развивающихся стран",
+      "plan_total": {
+        "currency": "usd",
+        "units": 98375,
+        "nano": 400000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 88150,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "usd",
+        "units": 2,
+        "nano": 196150000
+      },
+      "exit_loss_price": {
+        "currency": "usd",
+        "units": 0,
+        "nano": 665500000
+      },
+      "target_progress": "-0.1346"
+    },
+    {
+      "figi": "BBG004730N88",
+      "instrument_type": "share",
+      "plan_quantity": {
+        "units": 380,
+        "nano": 0
+      },
+      "ticker": "SBER",
+      "name": "Сбер Банк",
+      "plan_total": {
+        "currency": "rub",
+        "units": 100821,
+        "nano": 600000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 340,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 167,
+        "nano": 62500000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 50,
+        "nano": 625000000
+      },
+      "target_progress": "2.4930"
+    },
+    {
+      "figi": "TCS00A105ZX2",
+      "instrument_type": "bond",
+      "plan_quantity": {
+        "units": 105,
+        "nano": 0
+      },
+      "ticker": "RU000A105ZX2",
+      "name": "Борец Капитал 1P-01",
+      "plan_total": {
+        "currency": "rub",
+        "units": 98710,
+        "nano": 500000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 45,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 1653,
+        "nano": 465000000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 501,
+        "nano": 50000000
+      },
+      "target_progress": "-0.1557"
+    },
+    {
+      "figi": "TCS00A105VU7",
+      "instrument_type": "bond",
+      "plan_quantity": {
+        "units": 102,
+        "nano": 0
+      },
+      "ticker": "RU000A105VU7",
+      "name": "Эталон выпуск 002Р-01",
+      "plan_total": {
+        "currency": "rub",
+        "units": 99327,
+        "nano": 600000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 17,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 1680,
+        "nano": 855000000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 509,
+        "nano": 350000000
+      },
+      "target_progress": "-0.1590"
+    },
+    {
+      "figi": "TCS00A106R95",
+      "instrument_type": "bond",
+      "plan_quantity": {
+        "units": 101,
+        "nano": 0
+      },
+      "ticker": "RU000A106R95",
+      "name": "Селектел выпуск 3",
+      "plan_total": {
+        "currency": "rub",
+        "units": 98727,
+        "nano": 500000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 26,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 1670,
+        "nano": 790000000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 506,
+        "nano": 300000000
+      },
+      "target_progress": "-0.1607"
+    },
+    {
+      "figi": "BBG004731354",
+      "instrument_type": "share",
+      "plan_quantity": {
+        "units": 176,
+        "nano": 0
+      },
+      "ticker": "ROSN",
+      "name": "Роснефть",
+      "plan_total": {
+        "currency": "rub",
+        "units": 98771,
+        "nano": 200000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 101,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 947,
+        "nano": 100000000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 287,
+        "nano": 0
+      },
+      "target_progress": "-0.1629"
+    },
+    {
+      "figi": "BBG005N1KZX4",
+      "instrument_type": "etf",
+      "plan_quantity": {
+        "units": 1375,
+        "nano": 0
+      },
+      "ticker": "FXRU",
+      "name": "FinEx Еврооблигации рос. компаний (USD)",
+      "plan_total": {
+        "currency": "rub",
+        "units": 98408,
+        "nano": 750000000
+      },
+      "plan_proportion_in_portfolio": "0.0500",
+      "to_buy_lots": {
+        "units": 1125,
+        "nano": 0
+      },
+      "target_profit": "1.6500",
+      "exit_drawdown": "0.5000",
+      "exit_profit_price": {
+        "currency": "rub",
+        "units": 143,
+        "nano": 830500000
+      },
+      "exit_loss_price": {
+        "currency": "rub",
+        "units": 43,
+        "nano": 585000000
+      },
+      "target_progress": "-0.1303"
     }
   ]
 }
