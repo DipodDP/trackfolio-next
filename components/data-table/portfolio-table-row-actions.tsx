@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { DotsHorizontalIcon } from "@radix-ui/react-icons"
-import { Row } from "@tanstack/react-table"
+import { DotsHorizontalIcon } from "@radix-ui/react-icons";
+import { Row } from "@tanstack/react-table";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,23 +16,23 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 
-import { portfolioLabels } from "@/app/(root)/portfolio/data/data"
-import { portfolioSchema } from "@/app/(root)/portfolio/data/schema"
+import { portfolioLabels } from "@/app/(root)/portfolio/data/data";
+import { portfolioSchema } from "@/app/(root)/portfolio/data/schema";
 // import Link from "next/link"
-import { EditPositionDialog } from "../Dialog"
-import { useState } from "react"
+import { EditPositionDialog } from "../Dialog";
+import { useState } from "react";
 
 interface PortfolioTableRowActionsProps<TData> {
-  row: Row<TData>
+  row: Row<TData>;
 }
 
 export function PortfolioTableRowActions<TData>({
   row,
 }: PortfolioTableRowActionsProps<TData>) {
-  const position = portfolioSchema.parse(row.original)
-  const [isEditOpen, setIsEditOpen] = useState(false)
+  const position = portfolioSchema.parse(row.original);
+  const [isEditOpen, setIsEditOpen] = useState(false);
 
   return (
     <DropdownMenu>
@@ -51,11 +51,11 @@ export function PortfolioTableRowActions<TData>({
         position={position}
       />
       <DropdownMenuContent align="end" className="w-[160px]">
-          <DropdownMenuItem onSelect={() => setIsEditOpen(true)}>
-            {/* <Link href="edit-position"> */}
-            Edit Position
-            {/* </Link> */}
-          </DropdownMenuItem>
+        <DropdownMenuItem onSelect={() => setIsEditOpen(true)}>
+          {/* <Link href="edit-position"> */}
+          Edit Position
+          {/* </Link> */}
+        </DropdownMenuItem>
         {/* <EditPositionDialog open={isEditOpen} setIsOpen={setIsEditOpen} /> */}
         <DropdownMenuItem>Show info</DropdownMenuItem>
         <DropdownMenuItem>Favorite</DropdownMenuItem>
@@ -79,5 +79,5 @@ export function PortfolioTableRowActions<TData>({
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

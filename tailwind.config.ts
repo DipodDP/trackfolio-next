@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   darkMode: ["class"],
@@ -176,9 +176,9 @@ const config: Config = {
       colors: {
         // "primary-500": "#877EFF",
         "primary-500": "#f3a505",
-        'primary-600': '#ffa50F',
+        "primary-600": "#ffa50F",
         "secondary-500": "#FFB620",
-        'off-white': '#D0DFFF',
+        "off-white": "#D0DFFF",
         blue: "#0095F6",
         "logout-btn": "#FF5A5A",
         "navbar-menu": "rgba(16, 16, 18, 0.6)",
@@ -201,20 +201,20 @@ const config: Config = {
         xs: "480px",
       },
       width: {
-        '420': '420px',
-        '465': '465px',
+        "420": "420px",
+        "465": "465px",
       },
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
+        inter: ["Inter", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
-          from: { height: '0' },
+          from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: '0' },
+          to: { height: "0" },
         },
       },
       animation: {
@@ -224,5 +224,5 @@ const config: Config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
-export default config
+};
+export default config;

@@ -1,31 +1,32 @@
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
+} from "@/components/ui/popover";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 interface PopoverProps {
-  defaultValue: string
-  toBuy: number
+  defaultValue: string;
+  toBuy: number;
   children: React.ReactNode;
 }
 
-const PopoverPlanProportion: React.FC<PopoverProps> = ({ children, defaultValue, toBuy }) => {
+const PopoverPlanProportion: React.FC<PopoverProps> = ({
+  children,
+  defaultValue,
+  toBuy,
+}) => {
   const [isOpen, setIsOpen] = useState(undefined as any);
   const handleClose = () => {
     setIsOpen(false);
   };
 
-
   return (
     <Popover open={isOpen} onOpenChange={() => setIsOpen(undefined)}>
-      <PopoverTrigger asChild>
-        {children}
-      </PopoverTrigger>
+      <PopoverTrigger asChild>{children}</PopoverTrigger>
       <PopoverContent className="w-60">
         <div className="grid gap-4">
           <div className="space-y-2">
@@ -51,9 +52,7 @@ const PopoverPlanProportion: React.FC<PopoverProps> = ({ children, defaultValue,
             </div>
 
             <div className="grid grid-cols-2 items-center gap-2">
-              <button
-                className="col-span-1 mt-2 py-2 w-30 bg-primary-500 text-light-1 text-sm rounded hover:shadow-md transition-all"
-              >
+              <button className="col-span-1 mt-2 py-2 w-30 bg-primary-500 text-light-1 text-sm rounded hover:shadow-md transition-all">
                 Rebalance
               </button>
               <button
@@ -63,7 +62,6 @@ const PopoverPlanProportion: React.FC<PopoverProps> = ({ children, defaultValue,
                 Close
               </button>
             </div>
-
           </div>
         </div>
       </PopoverContent>

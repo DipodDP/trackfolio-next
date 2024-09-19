@@ -3,7 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 const LS_FAV_KEY = 'rfk'
 
 interface TrackfolioState {
-  favourites: string[]
+    favourites: string[]
 }
 
 // const initialState: TrackfolioState = {

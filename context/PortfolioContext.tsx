@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import { IPortfolioResponse } from '@/lib/models/portfolio.api.model'
-import React, { createContext, useContext, useState } from 'react'
+import { IPortfolioResponse } from "@/lib/models/portfolio.api.model";
+import React, { createContext, useContext, useState } from "react";
 /**
  * Creates an initial state object based on the structure of the provided sourceInterface.
  * The initial state object has the same structure as the sourceInterface, but with all properties set to empty strings.
@@ -25,25 +25,27 @@ import React, { createContext, useContext, useState } from 'react'
 // const INITIAL_PORTFOLIO = createInitialState(IPortfolioResponse)
 
 type IPortfolioContextType = {
-  portfolio: IPortfolioResponse,
+  portfolio: IPortfolioResponse;
   // isLoading: boolean,
-  setPortfolio: React.Dispatch<React.SetStateAction<IPortfolioResponse>>,
+  setPortfolio: React.Dispatch<React.SetStateAction<IPortfolioResponse>>;
   // isFetched: boolean,
   // setIsFetched: React.Dispatch<React.SetStateAction<boolean>>
-}
+};
 
 const INITIAL_STATE = {
   portfolio: {} as IPortfolioResponse,
   // isLoading: false,
   // isFetched: false,
-  setPortfolio: () => {},
+  setPortfolio: () => { },
   // setIsFetched: () => {}
-}
+};
 
-const PortfolioContext = createContext<IPortfolioContextType>(INITIAL_STATE)
+const PortfolioContext = createContext<IPortfolioContextType>(INITIAL_STATE);
 
-const PortfolioProvider = ({children}: {children: React.ReactNode}) => {
-  const [portfolio, setPortfolio] = useState<IPortfolioResponse>({} as IPortfolioResponse)
+const PortfolioProvider = ({ children }: { children: React.ReactNode }) => {
+  const [portfolio, setPortfolio] = useState<IPortfolioResponse>(
+    {} as IPortfolioResponse,
+  );
   // const [isLoading, setIsLoading] = useState(false)
 
   const value = {
@@ -51,15 +53,15 @@ const PortfolioProvider = ({children}: {children: React.ReactNode}) => {
     setPortfolio,
     isLoading: false,
     // setIsLoading
-  }
+  };
 
   return (
     <PortfolioContext.Provider value={value}>
       {children}
     </PortfolioContext.Provider>
-  )
-}
+  );
+};
 
-export default PortfolioProvider
+export default PortfolioProvider;
 
-export const usePortfolioContext = () => useContext(PortfolioContext)
+export const usePortfolioContext = () => useContext(PortfolioContext);

@@ -1,5 +1,5 @@
 import { Query } from "./Query";
-import  TableExample  from "./DataTable";
+import TableExample from "./DataTable";
 import { Counter } from "./Counter";
 import { PopoverDemo } from "./PopoverDemo";
 import Tooltip from "@/components/shared/Tooltip";
@@ -8,7 +8,7 @@ import { DialogDemo } from "./Dialog";
 
 function Page() {
 
-return (
+  return (
     <div>
       {/* Redux-toolkit example */}
       <h2 className="head-text text-left mb-2">Redux counter example</h2>

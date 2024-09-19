@@ -3,7 +3,7 @@
 import { useGetTodos } from "@/lib/react-query/queriesAndMutations";
 
 export function Query() {
-  const {error, isLoading, data: todos} = useGetTodos()
+  const { error, isLoading, data: todos } = useGetTodos()
 
   return (
     <>

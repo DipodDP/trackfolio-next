@@ -1,15 +1,12 @@
-import { IOrder } from "@/lib/models/order.api.model"
-import axios from "axios"
+import { IOrder } from "@/lib/models/order.api.model";
+import axios from "axios";
 
 class OrdersService {
-
-  private URL = process.env.NEXT_PUBLIC_API_BASE_URL
+  private URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
   async postOrder() {
-    return axios.post<IOrder[]>(
-      `${this.URL}/portfolio`
-    )
+    return axios.post<IOrder[]>(`${this.URL}/portfolio`);
   }
 }
 
-export default new OrdersService()
+export default new OrdersService();
