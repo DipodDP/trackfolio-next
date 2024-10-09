@@ -4,10 +4,10 @@ import * as z from "zod";
 export const authFormSchema = (type: string) => z.object({
   // sign up
   firstName: type === 'sign-in' ? z.string().optional() : z.string().min(3),
-  token: type === 'sign-in' ? z.string().optional() : z.string().length(88),
+  // token: type === 'sign-in' ? z.string().optional() : z.string().length(88),
   // both
   email: z.string().email(),
-  password: z.string().min(8),
+  password: z.string().min(6),
 })
 
 export const EditPositionValidation = z.object({

@@ -12,9 +12,15 @@ import {
 import { z } from 'zod'
 import CustomInput from './CustomInput'
 import { Loader2 } from 'lucide-react'
+import { useRouter } from 'next/navigation'
+/* import { signIn, signUp } from '@/lib/user.actions' */
+import { usePostLogin, usePostRegister } from '@/lib/react-query/queriesAndMutations'
 
 const AuthForm = ({ type }: { type: string }) => {
-  const [user, setuser] = useState(null)
+  const router = useRouter()
+  const { mutateAsync: postRegister, isPending: isPendingRegister, data: registerData } = usePostRegister()
+  const { mutateAsync: postLogin, isPending: isPendingLogin, data: loginData } = usePostLogin()
+  const [user, setUser] = useState(null)
   const [isLoading, setIsLoading] = useState(false);
   const formSchema = authFormSchema(type);
 
@@ -28,7 +34,39 @@ const AuthForm = ({ type }: { type: string }) => {
   })
 
   // 2. Define a submit handler.
-  const onSubmit = async (data: z.infer<typeof formSchema>) => { }
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    setIsLoading(true);
+
+    try {
+      const signInCredentials = {
+        username: data.email,
+        password: data.password,
+      };
+      const signUpCredentials = {
+        email: data.email,
+        password: data.password,
+        username: data.firstName!,
+        /* token: data.token, */
+      }
+      if (type === 'sign-up') {
+        await postRegister(signUpCredentials);  // Trigger the login mutation
+        const response = await postLogin(signInCredentials);  // Trigger the login mutation
+        if (response.status === 204) router.push('/')
+      }
+      if (type === 'sign-in') {
+        const signInCredentials = {
+          username: data.email,
+          password: data.password,
+        };
+        const response = await postLogin(signInCredentials);  // Trigger the login mutation
+        if (response.status === 204) router.push('/')
+      }
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setIsLoading(false)
+    }
+  }
 
   return (
     <section className='auth-form'>
@@ -78,7 +116,7 @@ const AuthForm = ({ type }: { type: string }) => {
                   <div className="flex gap-4">
                     <CustomInput control={form.control} name='firstName' label="Name" placeholder='Enter your name' />
                   </div>
-                  <CustomInput control={form.control} name='token' label="Token" placeholder='Enter your invest token' />
+                  {/* <CustomInput control={form.control} name='token' label="Token" placeholder='Enter your invest token' /> */}
                 </>
               )}
 
