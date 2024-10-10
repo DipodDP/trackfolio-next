@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 
 function Page() {
   const [search, setSearch] = useState("");
-  const [dropdown, setDropdown] = useState(false);
+  /* const [dropdown, setDropdown] = useState(false); */
   const debounced = useDebounce(search);
 
   const {
@@ -24,7 +24,7 @@ function Page() {
 
   useEffect(() => {
     console.log("Debounced: ", debounced);
-    setDropdown(debounced.length >= 3 && assets?.length! > 0);
+    /* setDropdown(debounced.length >= 3 && assets?.length! > 0); */
   }, [debounced, assets]);
 
   console.log("Assets: ", assets);

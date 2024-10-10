@@ -13,6 +13,7 @@ export const trackfolioApi = createApi({
   reducerPath: "trackfolio/api",
   baseQuery: fetchBaseQuery({
     baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL,
+    credentials: "include",  // This enables sending cookies
   }),
   refetchOnFocus: true,
   endpoints: (build) => ({
@@ -44,3 +45,4 @@ export const trackfolioApi = createApi({
 
 // automaticly generated hook
 export const { useSearchAssetsQuery, useLazySearchAssetsQuery } = trackfolioApi;
+

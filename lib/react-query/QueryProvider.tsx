@@ -24,11 +24,11 @@ export const QueryProvider = ({ children }: { children: React.ReactNode }) => {
   //     }),
   // )
   return (
-      <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={queryClient}>
       {/* <ReactQueryStreamedHydration> */}
-        {children}
+      {children}
       {/* </ReactQueryStreamedHydration> */}
       {/* {<ReactQueryDevtools initialIsOpen={false} />} */}
-      </QueryClientProvider>
+    </QueryClientProvider>
   )
 }
