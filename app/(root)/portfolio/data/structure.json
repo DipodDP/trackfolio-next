@@ -1,0 +1,96 @@
+{
+  "total_amount": {
+    "currency": "rub",
+    "units": 1999680,
+    "nano": 0
+  },
+  "risk_profile": "0.35",
+  "max_risk_part_drawdown": "0.5",
+  "risk_proportion": "0.7",
+  "corp_bonds_proportion": "0.4",
+  "shares_proportion": "0.8",
+  "current_structure": {
+    "high_risk_part": {
+      "etf_proportion": "0.0000",
+      "shares_proportion": "1.0000",
+      "etf_amount": {
+        "currency": "rub",
+        "units": 0,
+        "nano": 0
+      },
+      "shares_amount": {
+        "currency": "rub",
+        "units": 234350,
+        "nano": 0
+      },
+      "high_risk_total_amount": {
+        "currency": "rub",
+        "units": 234350,
+        "nano": 0
+      },
+      "high_risk_total_proportion": "1.0000"
+    },
+    "low_risk_part": {
+      "gov_bonds_proportion": null,
+      "corp_bonds_proportion": null,
+      "gov_bonds_amount": {
+        "currency": "rub",
+        "units": 0,
+        "nano": 0
+      },
+      "corp_bonds_amount": {
+        "currency": "rub",
+        "units": 0,
+        "nano": 0
+      },
+      "low_risk_total_amount": {
+        "currency": "rub",
+        "units": 0,
+        "nano": 0
+      },
+      "low_risk_total_proportion": "0.0000"
+    }
+  },
+  "plan_structure": {
+    "high_risk_part": {
+      "etf_proportion": "0.2",
+      "shares_proportion": "0.8",
+      "etf_amount": {
+        "currency": "rub",
+        "units": 32809,
+        "nano": 0
+      },
+      "shares_amount": {
+        "currency": "rub",
+        "units": 131236,
+        "nano": 0
+      },
+      "high_risk_total_amount": {
+        "currency": "rub",
+        "units": 164045,
+        "nano": 0
+      },
+      "high_risk_total_proportion": "0.7000"
+    },
+    "low_risk_part": {
+      "gov_bonds_proportion": "0.6",
+      "corp_bonds_proportion": "0.4",
+      "gov_bonds_amount": {
+        "currency": "rub",
+        "units": 42183,
+        "nano": 0
+      },
+      "corp_bonds_amount": {
+        "currency": "rub",
+        "units": 28122,
+        "nano": 0
+      },
+      "low_risk_total_amount": {
+        "currency": "rub",
+        "units": 70305,
+        "nano": 0
+      },
+      "low_risk_total_proportion": "0.3000"
+    }
+  }
+}
