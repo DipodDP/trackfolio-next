@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { DotsHorizontalIcon } from "@radix-ui/react-icons"
-import { Row } from "@tanstack/react-table"
+import { DotsHorizontalIcon } from "@radix-ui/react-icons";
+import { Row } from "@tanstack/react-table";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,19 +16,23 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 
-import { portfolioLabels } from "@/app/(root)/portfolio/data/data"
-import { positionSchema } from "@/app/(root)/portfolio/data/schema"
+import { portfolioLabels } from "@/app/(root)/portfolio/data/data";
+import { portfolioSchema } from "@/app/(root)/portfolio/data/schema";
+// import Link from "next/link"
+import { EditPositionDialog } from "../Dialog";
+import { useState } from "react";
 
 interface PortfolioTableRowActionsProps<TData> {
-  row: Row<TData>
+  row: Row<TData>;
 }
 
 export function PortfolioTableRowActions<TData>({
   row,
 }: PortfolioTableRowActionsProps<TData>) {
-  const position = positionSchema.parse(row.original)
+  const position = portfolioSchema.parse(row.original);
+  const [isEditOpen, setIsEditOpen] = useState(false);
 
   return (
     <DropdownMenu>
@@ -41,13 +45,23 @@ export function PortfolioTableRowActions<TData>({
           <span className="sr-only">Open menu</span>
         </Button>
       </DropdownMenuTrigger>
+      <EditPositionDialog
+        open={isEditOpen}
+        setIsOpen={setIsEditOpen}
+        position={position}
+      />
       <DropdownMenuContent align="end" className="w-[160px]">
-        <DropdownMenuItem>Edit</DropdownMenuItem>
-        <DropdownMenuItem>Make a copy</DropdownMenuItem>
+        <DropdownMenuItem onSelect={() => setIsEditOpen(true)}>
+          {/* <Link href="edit-position"> */}
+          Edit Position
+          {/* </Link> */}
+        </DropdownMenuItem>
+        {/* <EditPositionDialog open={isEditOpen} setIsOpen={setIsEditOpen} /> */}
+        <DropdownMenuItem>Show info</DropdownMenuItem>
         <DropdownMenuItem>Favorite</DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuSub>
-          <DropdownMenuSubTrigger>portfoliotypes</DropdownMenuSubTrigger>
+          <DropdownMenuSubTrigger>Asset type</DropdownMenuSubTrigger>
           <DropdownMenuSubContent>
             <DropdownMenuRadioGroup value={position.instrument_type}>
               {portfolioLabels.map((type) => (
@@ -65,5 +79,5 @@ export function PortfolioTableRowActions<TData>({
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

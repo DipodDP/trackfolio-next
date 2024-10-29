@@ -3,4 +3,5 @@ export enum QUERY_KEYS {
   TODOS = 'todos',
   PORTFOLIO = 'portfolio',
   STRUCTURE = 'structure',
+  AUTH = 'auth'
 }

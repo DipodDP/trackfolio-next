@@ -1,15 +1,13 @@
-import { IOrder } from "@/lib/models/order.model"
-import axios from "axios"
+import { IOrder } from "@/lib/models/order.api.model";
+import { API_ENDPOINTS } from "@/lib/react-query/endpoints";
+import axios from "axios";
 
 class OrdersService {
-
-  private URL = process.env.NEXT_PUBLIC_API_BASE_URL
+  private URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
   async postOrder() {
-    return axios.post<IOrder[]>(
-      `${this.URL}/portfolio`
-    )
+    return axios.post<IOrder[]>(`${this.URL}${API_ENDPOINTS.PORTFOLIO}`);
   }
 }
 
-export default new OrdersService()
+export default new OrdersService();
