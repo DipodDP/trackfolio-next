@@ -32,11 +32,17 @@ const EditPosition = () => {
     resolver: zodResolver(EditPositionValidation),
     defaultValues: {
       planProportionInPortfolio:
-        parseFloat(portfolio.plan_positions[0].plan_proportion_in_portfolio) *
-        100,
+      portfolio.plan_positions?.[0]?.plan_proportion_in_portfolio
+        ? parseFloat(portfolio.plan_positions[0].plan_proportion_in_portfolio) * 100
+        : 0, // or a default value
       targetProfit:
-        parseFloat(portfolio.plan_positions[0].target_profit) * 100 - 100,
-      exitDrawdown: parseFloat(portfolio.plan_positions[0].exit_drawdown) * 100,
+      portfolio.plan_positions?.[0]?.target_profit
+        ? parseFloat(portfolio.plan_positions[0].target_profit) * 100 - 100
+        : 0, // or a default value
+      exitDrawdown:
+      portfolio.plan_positions?.[0]?.exit_drawdown
+        ? parseFloat(portfolio.plan_positions[0].exit_drawdown) * 100
+        : 0, // or a default value
     },
   });
 
