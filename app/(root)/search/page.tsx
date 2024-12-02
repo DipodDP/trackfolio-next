@@ -64,7 +64,7 @@ function Page() {
                 {favourites.map((f) => (
                   <li key={f}>
                     <a
-                      href={`${process.env.NEXT_PUBLIC_API_BASE_URL}/portfolio/${f}`}
+                      href={`/api/portfolio/${f}`}
                       target="_blank"
                     >
                       {f}

@@ -32,7 +32,7 @@ export function AssetCard({ asset }: { asset: IInstrumentShort }) {
   const { mutateAsync: postOrder, isPending } = usePostOrder();
 
   return (
-    <a href={asset.figi} target="_blank">
+    <a href={`/api/portfolio/${asset.figi}`} target="_blank">
       <div className="justify-start border py-3 px-5 rounded cursor-pointer mb-2 hover:bg-gray-600 transition-all">
         <h2 className="text-lg font-bold">{asset.name}</h2>
         <p className="text-sm">
