@@ -1,22 +1,25 @@
-import { ILogin, IRegister } from "@/lib/models/auth.api.model";
+import { ILogin, ILoginResponse, IRegister } from "@/lib/models/auth.api.model";
 import { API_ENDPOINTS } from "@/lib/react-query/endpoints";
+// import { verifySession } from "@/lib/stateless-session";
 import axios from "axios";
 
 class AuthService {
-  private URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+  // private url = '/api';
+  private url = process.env.NEXT_PUBLIC_API_BASE_URL
   private headers = {
     'accept': 'application/json',
+    // 'Authorization': 'Bearer ' + getAccessToken
     // 'Access-Control-Allow-Origin': '*',
   }
 
   async postRegister(request: IRegister) {
     // Make the POST request using axios and return the response
-    return axios.post<IRegister>(`${this.URL}${API_ENDPOINTS.AUTH_REGISTER}`, request, {
+    return axios.post<IRegister>(`${this.url}${API_ENDPOINTS.AUTH_REGISTER}`, request, {
       headers: {
         ...this.headers,
         'Content-Type': 'application/json',
       },
-      withCredentials: true
+      // withCredentials: true
     });
   }
 
@@ -29,19 +32,19 @@ class AuthService {
     });
 
     // Make the POST request using axios and return the response
-    return axios.post<ILogin>(`${this.URL}${API_ENDPOINTS.AUTH_LOGIN}`, params, {
+    return axios.post<ILoginResponse>(`${this.url}${API_ENDPOINTS.AUTH_LOGIN}`, params, {
       headers: {
         ...this.headers,
         'Content-Type': 'application/x-www-form-urlencoded',
       },
-      withCredentials: true
+      // withCredentials: true
     });
   }
 
   async postLogout() {
-    return axios.post(`${this.URL}${API_ENDPOINTS.AUTH_LOGOUT}`, {}, {
+    return axios.post(`${this.url}${API_ENDPOINTS.AUTH_LOGOUT}`, {}, {
       headers: this.headers,
-      withCredentials: true
+      // withCredentials: true
     });
   }
 }

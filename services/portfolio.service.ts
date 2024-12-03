@@ -6,25 +6,29 @@ import { API_ENDPOINTS } from "@/lib/react-query/endpoints";
 import axios from "axios";
 
 class PortfolioService {
-  private URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+  // private url = process.env.NEXT_PUBLIC_API_BASE_URL;
+  private url = '/api';
   private headers = {
     'accept': 'application/json',
+    // 'Authorization': 'Bearer ' + getAccessToken
   }
 
   async getPortfolio() {
+    'use server';
     return axios.get<IPortfolioResponse>(
-      `${this.URL}${API_ENDPOINTS.PORTFOLIO}`, {
+      `${this.url}${API_ENDPOINTS.PORTFOLIO}`, {
         headers: this.headers,
-        withCredentials: true
+        // withCredentials: true
       }
     );
   }
 
   async getStructure() {
+    'use server';
     return axios.get<IStructureResponse>(
-      `${this.URL}${API_ENDPOINTS.STRUCTURE}`, {
+      `${this.url}${API_ENDPOINTS.STRUCTURE}`, {
         headers: this.headers,
-        withCredentials: true
+        // withCredentials: true
       }
     );
   }

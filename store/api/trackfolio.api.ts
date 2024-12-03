@@ -12,7 +12,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const trackfolioApi = createApi({
   reducerPath: "trackfolio/api",
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL,
+    baseUrl: '/api',
     credentials: "include",  // This enables sending cookies
   }),
   refetchOnFocus: true,
@@ -45,4 +45,3 @@ export const trackfolioApi = createApi({
 
 // automaticly generated hook
 export const { useSearchAssetsQuery, useLazySearchAssetsQuery } = trackfolioApi;
-

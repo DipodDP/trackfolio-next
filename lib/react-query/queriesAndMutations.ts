@@ -11,6 +11,7 @@ import portfolioService from '@/services/portfolio.service'
 import { selectStructure } from './querySelectFunctions'
 import { ILogin, IRegister } from '../models/auth.api.model'
 import authService from '@/services/auth.service'
+// import { createSession } from '@/lib/stateless-session'
 // import { getTestPortfolio, getTestStructure } from '../serverUtils'
 
 const todoId = 1
@@ -39,9 +40,9 @@ export const usePostLogin = () => {
 
   return useMutation({
     mutationFn: async (request: ILogin) => authService.postLogin(request),
-    // select: ({ data }) => selectStructure(structure),
     onSuccess: (data) => {
       console.log('Login successful!', data);
+      // createSession(data.data.access_token)
       // Invalidate any auth-related queries if necessary
       queryClient.invalidateQueries({
         queryKey: [QUERY_KEYS.AUTH]

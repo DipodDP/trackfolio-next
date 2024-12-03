@@ -7,6 +7,11 @@ export interface ILogin {
   client_secret?: string
 }
 
+export interface ILoginResponse {
+  access_token: string
+  token_type: string
+}
+
 export interface IRegister {
   username: string
   password: string
@@ -15,4 +20,13 @@ export interface IRegister {
   is_active?: boolean,
   is_superuser?: boolean,
   is_verified?: boolean,
+}
+
+export interface IRegisterResponse {
+  id: string,
+  username: string
+  email: string,
+  is_active: boolean,
+  is_superuser: boolean,
+  is_verified: boolean,
 }
