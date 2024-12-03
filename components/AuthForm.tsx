@@ -3,7 +3,7 @@ import { AuthFormSchema } from '@/validation'
 import { zodResolver } from '@hookform/resolvers/zod'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState, useActionState } from 'react'
+import React, { useState, useActionState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { Button } from "@/components/ui/button"
 import {
@@ -31,6 +31,34 @@ const AuthForm = ({ type }: { type: string }) => {
     },
   })
 
+
+  // 2. Watch for errors in the action state and set them in the form
+  useEffect(() => {
+    // Clear previous errors if any
+    form.clearErrors();
+
+    if (state?.errors?.email) {
+      form.control.setError('email', {
+        type: 'manual',
+        message: state.errors.email.join(", "),
+      });
+    }
+
+    if (state?.errors?.password) {
+      form.control.setError('password', {
+        type: 'manual',
+        message: state.errors.password.join(", "),
+      });
+    }
+
+    if (state?.errors?.firstName && type === 'sign-up') {
+      form.control.setError('firstName', {
+        type: 'manual',
+        message: state.errors.firstName.join(", "),
+      });
+    }
+    console.log('Error: ', state?.errors)
+  }, [state, form.control, type]);
 
   return (
     <section className='auth-form'>
@@ -72,7 +100,6 @@ const AuthForm = ({ type }: { type: string }) => {
           <Form {...form}>
             <form action={ type === 'sign-in' ? signInAction : signUpAction} className="space-y-8">
               <CustomInput control={form.control} name='email' label="Email" placeholder='Enter your email' />
-
               <CustomInput control={form.control} name='password' label="Password" placeholder='Enter your password' />
 
               {type === 'sign-up' && (
@@ -80,26 +107,13 @@ const AuthForm = ({ type }: { type: string }) => {
                   <div className="flex gap-4">
                     <CustomInput control={form.control} name='firstName' label="Name" placeholder='Enter your name' />
                   </div>
-                  {/* <CustomInput control={form.control} name='token' label="Token" placeholder='Enter your invest token' /> */}
                 </>
               )}
 
               <div className="flex flex-col gap-4">
-                {/* <Button type="submit" disabled={isLoading} className="form-btn"> */}
-                {/*   {isLoading ? ( */}
-                {/*     <> */}
-                {/*       <Loader2 size={20} className="animate-spin" /> &nbsp; */}
-                {/*       Loading... */}
-                {/*     </> */}
-                {/*   ) : type === 'sign-in' */}
-                {/*     ? 'Sign In' : 'Sign Up'} */}
-                {/* </Button> */}
-                {state?.errors?.password && (
-                  <p className="text-red-500">{state.errors.password}</p>
-                )}
                 <SubmitButton type={type} />
-                {state?.errors?.email && (
-                  <p className="text-red-500">{state.errors.email}</p>
+                {state?.errors?.general && (
+                  <p className="text-red-500">{state.errors.general}</p>
                 )}
               </div>
             </form>

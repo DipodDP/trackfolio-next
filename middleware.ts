@@ -16,7 +16,7 @@ export async function middleware(request: NextRequest) {
   // || nextUrl.pathname === ROOT
   ) && !PROTECTED_SUB_ROUTES.find(route => nextUrl.pathname.includes(route));
 
-  console.log('Authenticated:', isAuthenticated, 'for', nextUrl.href, '; is public:', isPublicRoute);
+  console.log('Authenticated:', isAuthenticated, 'for', nextUrl.href, 'is public:', isPublicRoute);
 
   if (!isAuthenticated && !isPublicRoute)
     // If token does not exist, redirect to login
@@ -46,7 +46,7 @@ export async function middleware(request: NextRequest) {
       },
     }); // Continue to the protected route
 
-    console.log('Continue...', response)
+    // console.log('Continue...', response)
 
     return response
 
